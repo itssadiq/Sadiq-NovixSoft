@@ -5,7 +5,7 @@ import { Twitter, Instagram, Linkedin, Zap } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="w-full min-h-[calc(100vh-80px)] flex flex-col justify-between px-1 md:px-6 pt-8 md:pt-10 pb-40 md:pb-16 max-w-[1400px] mx-auto">
+    <section className="w-full min-h-[calc(100vh-80px)] flex flex-col justify-between px-1 md:px-6 pt-8 md:pt-10 pb-50 md:pb-16 max-w-[1400px] mx-auto">
       {/* --- TOP SECTION: PROFILE & TEXT --- */}
       <div className="flex flex-col items-start gap-8 md:gap-6 w-full">
         {/* 1. Profile Pill */}
@@ -15,25 +15,25 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-col gap-1">
-            <h3 className="text-white text-base font-medium">David Smith</h3>
+            <h3 className="text-white font-large text-2xl">David Smith</h3>
             <div className="flex gap-3">
               <a
                 href="#"
                 className="text-[#8A8A8A] hover:text-white transition-colors"
               >
-                <Twitter size={14} />
+                <Twitter size={18} />
               </a>
               <a
                 href="#"
                 className="text-[#8A8A8A] hover:text-white transition-colors"
               >
-                <Instagram size={14} />
+                <Instagram size={18} />
               </a>
               <a
                 href="#"
                 className="text-[#8A8A8A] hover:text-white transition-colors"
               >
-                <Linkedin size={14} />
+                <Linkedin size={18} />
               </a>
             </div>
           </div>
@@ -41,7 +41,7 @@ export default function Hero() {
 
         {/* 2. Main Typography */}
         <div className="flex flex-col gap-6 w-full">
-          <h1 className="text-4xl leading-[1.05] md:text-5xl lg:text-6xl font-semibold text-white tracking-tight w-full break-words">
+          <h1 className="text-4xl leading-[1.05] md:text-5xl lg:text-7xl font-semibold text-white tracking-tight w-full break-words">
             I Design Websites That Captivate, Convert, and Elevate Your Brand.
           </h1>
 
@@ -57,12 +57,12 @@ export default function Hero() {
         {/* CTA Button */}
         <Link
           href="/contact"
-          className="group flex items-center gap-2 bg-[var(--color-accent)] text-black rounded-full font-bold transition-transform hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(130,255,28,0.4)] px-8 py-4 text-md md:text-sm whitespace-nowrap"
+          className="group flex items-center gap-2 bg-[var(--color-accent)] text-black rounded-full font-bold transition-transform hover:bg-white  px-8 py-4 text-md whitespace-nowrap"
         >
           <Zap
             className="group-hover:scale-110 transition-transform"
             fill="currentColor"
-            size={20}
+            size={18}
           />
           Start Your Project
         </Link>
