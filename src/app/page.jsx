@@ -1,12 +1,14 @@
 import Hero from "../components/home/Hero";
+import FeaturedWork from "../components/home/FeaturedWork"; // Import the section
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-20">
-      {/* Hero Section */}
+    <div className="flex flex-col gap-10 md:gap-20">
       <Hero />
-      {/* Other sections will go here later (Work, Services, etc.) */}
-      <div className="h-20"></div> {/* Spacer for now */}
+      <FeaturedWork />
+
+      {/* Other sections... */}
+      <div className="h-20"></div>
     </div>
   );
 }
