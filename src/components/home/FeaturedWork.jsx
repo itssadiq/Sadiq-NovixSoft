@@ -1,6 +1,6 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react"; // Changed icon
 import ProjectCard from "@/components/ui/ProjectCard";
-import Button from "@/components/ui/Button"; // Import the new component
+import Button from "@/components/ui/Button";
 
 export default function FeaturedWork() {
   const projects = [
@@ -36,25 +36,20 @@ export default function FeaturedWork() {
 
   return (
     <section className="w-full px-1 md:px-2 pb-20 max-w-[1400px] mx-auto">
-      {/* --- THE GRID --- */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-12">
         {projects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            category={project.category}
-            bgColor={project.bgColor}
-            image={project.image}
-          />
+          <ProjectCard key={index} {...project} />
         ))}
       </div>
 
-      {/* --- SEE MORE WORK BUTTON --- */}
-      {/* Uses the reusable Button component now */}
       <div className="flex justify-center">
         <Button href="/work">
           See More Work
-          <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+          {/* ArrowUpRight starts at 45deg, rotates another 45deg to point right (90deg total) */}
+          <ArrowUpRight
+            size={20}
+            className="transition-transform duration-300 group-hover:rotate-45"
+          />
         </Button>
       </div>
     </section>

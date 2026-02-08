@@ -10,22 +10,17 @@ export default function ProjectCard({
 }) {
   return (
     <Link href={href} className="group block w-full">
-      {/* --- CARD CONTAINER --- */}
+      {/* Container */}
       <div
         className="w-full aspect-[4/3.2] rounded-[14px] p-5 md:p-8"
         style={{ backgroundColor: bgColor }}
       >
-        {/* --- INNER IMAGE WRAPPER --- */}
-        {/* 
-            - group-hover:scale-[1.03]: Reduced pop (3% growth)
-            - group-hover:shadow-[...]: Stronger, darker shadow (0.6 opacity)
-        */}
+        {/* Animated Wrapper */}
         <div
           className="relative w-full h-full rounded-lg transition-all duration-500 ease-out 
                         group-hover:scale-[1.03] 
                         group-hover:shadow-[0_25px_60px_-12px_rgba(0,0,0,0.6)]"
         >
-          {/* Inner div to clip image */}
           <div className="w-full h-full rounded-lg overflow-hidden relative">
             <Image
               src={image}
@@ -37,19 +32,13 @@ export default function ProjectCard({
         </div>
       </div>
 
-      {/* --- TEXT BELOW --- */}
+      {/* Metadata */}
       <div className="flex items-center gap-2 mt-2 px-1">
-        <h3 className="text-white text-lg md:text-lg font-bold tracking-tight">
-          {title}
-        </h3>
-
+        <h3 className="text-white text-lg font-bold tracking-tight">{title}</h3>
         <span className="text-[var(--color-accent)] text-lg leading-none">
           •
         </span>
-
-        <p className="text-[#8A8A8A] text-sm md:text-sm font-medium">
-          {category}
-        </p>
+        <p className="text-[#8A8A8A] text-sm font-medium">{category}</p>
       </div>
     </Link>
   );
