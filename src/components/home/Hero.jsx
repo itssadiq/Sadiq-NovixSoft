@@ -4,9 +4,14 @@ import Link from "next/link";
 import { Twitter, Instagram, Linkedin, Zap } from "lucide-react";
 
 export default function Hero() {
+  const socials = [
+    { Icon: Twitter, href: "#" },
+    { Icon: Instagram, href: "#" },
+    { Icon: Linkedin, href: "#" },
+  ];
+
   return (
-    // Updated mobile height to 75dvh as requested
-    <section className="w-full min-h-[75dvh] md:min-h-[calc(100vh-80px)] flex flex-col justify-between px-1 md:px-2 pt-8 md:pt-10 pb-12 md:pb-16 max-w-[1400px] mx-auto">
+    <section className="w-full max-w-[1400px] mx-auto px-1 md:px-2 pt-8 md:pt-10 pb-12 md:pb-16 flex flex-col justify-between min-h-[75dvh] md:min-h-[calc(100vh-80px)] xl:min-h-fit xl:gap-24">
       {/* --- TOP SECTION: PROFILE & TEXT --- */}
       <div className="flex flex-col items-start gap-8 md:gap-6 w-full">
         {/* 1. Profile Pill */}
@@ -16,26 +21,17 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-col gap-1">
-            <h3 className="text-white text-base font-medium">David Smith</h3>
+            <h3 className="text-white text-base font-medium">Sadiq Ali</h3>
             <div className="flex gap-3">
-              <a
-                href="#"
-                className="text-[#8A8A8A] hover:text-white transition-colors"
-              >
-                <Twitter size={14} />
-              </a>
-              <a
-                href="#"
-                className="text-[#8A8A8A] hover:text-white transition-colors"
-              >
-                <Instagram size={14} />
-              </a>
-              <a
-                href="#"
-                className="text-[#8A8A8A] hover:text-white transition-colors"
-              >
-                <Linkedin size={14} />
-              </a>
+              {socials.map(({ Icon, href }, i) => (
+                <a
+                  key={i}
+                  href={href}
+                  className="text-[#8A8A8A] hover:text-white transition-colors"
+                >
+                  <Icon size={14} />
+                </a>
+              ))}
             </div>
           </div>
         </div>
@@ -56,10 +52,9 @@ export default function Hero() {
       {/* --- BOTTOM SECTION: CTA & STATUS --- */}
       <div className="flex flex-col md:flex-row items-start md:items-center w-full gap-4 md:gap-0 mt-auto md:mt-0">
         {/* CTA Button */}
-        {/* Removed shadow, removed translate. Added hover:bg-white */}
         <Link
           href="/contact"
-          className="group flex items-center gap-2 bg-[var(--color-accent)] text-black rounded-full font-bold transition-colors duration-300 hover:bg-white px-6 py-4 text-lg md:px-6 md:py-4 whitespace-nowrap"
+          className="group flex items-center gap-2 bg-[var(--color-accent)] text-black rounded-full font-bold transition-colors duration-300 hover:bg-white px-6 py-4 text-lg whitespace-nowrap"
         >
           <Zap
             className="group-hover:scale-110 transition-transform"
