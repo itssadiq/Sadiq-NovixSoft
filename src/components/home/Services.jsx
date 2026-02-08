@@ -66,7 +66,7 @@ export default function Services() {
         </h2>
 
         {/* The horizontal line that adapts to screen size */}
-        <div className="h-[1px] bg-[#1a1a1a] w-full md:flex-grow md:min-w-[40px]"></div>
+        <div className="h-[2px] bg-[#1a1a1a] w-full md:flex-grow md:min-w-[40px]"></div>
 
         {/* Marquee Row */}
         <div className="relative flex overflow-hidden py-2 w-full md:max-w-md lg:max-w-xl">
@@ -88,7 +88,7 @@ export default function Services() {
         {services.map((service) => (
           <div
             key={service.id}
-            className="bg-[#121212] border border-[#1a1a1a] rounded-[1.5rem] p-6 md:p-8"
+            className="bg-[#121212] rounded-[1rem] p-6 md:p-8"
           >
             {/* Top Row: Info & Stats */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 md:gap-4 mb-8 md:mb-12">
@@ -101,7 +101,7 @@ export default function Services() {
                   {service.title}
                 </h3>
                 {/* Desktop-only connecting line */}
-                <div className="hidden md:block flex-grow h-[1px] bg-[#1a1a1a] mx-6"></div>
+                <div className="hidden md:block flex-grow h-[1.5px] bg-[#1a1a1a] mx-6"></div>
               </div>
 
               {/* Price & Duration */}
