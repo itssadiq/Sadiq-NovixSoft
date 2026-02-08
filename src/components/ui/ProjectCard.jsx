@@ -11,32 +11,35 @@ export default function ProjectCard({
   return (
     <Link href={href} className="group block w-full">
       {/* --- CARD CONTAINER --- */}
-      {/* Removed group-hover:scale from this div so the outer box stays static */}
       <div
-        className="w-full aspect-[4/3.2] rounded-[20px] p-5 md:p-8"
+        className="w-full aspect-[4/3.2] rounded-[14px] p-5 md:p-8"
         style={{ backgroundColor: bgColor }}
       >
         {/* --- INNER IMAGE WRAPPER --- */}
         {/* 
-            - group-hover:-translate-y-2: Moves image UP slightly
-            - group-hover:shadow-2xl: Adds shadow behind the image onto the colored bg
+            - group-hover:scale-[1.03]: Reduced pop (3% growth)
+            - group-hover:shadow-[...]: Stronger, darker shadow (0.6 opacity)
         */}
-        <div className="relative w-full h-full rounded-xl transition-all duration-500 ease-out group-hover:-translate-y-2 group-hover:shadow-2xl">
-          {/* We need this inner div to clip the image roundness while allowing shadow on the parent */}
-          <div className="w-full h-full rounded-xl overflow-hidden relative">
+        <div
+          className="relative w-full h-full rounded-lg transition-all duration-500 ease-out 
+                        group-hover:scale-[1.03] 
+                        group-hover:shadow-[0_25px_60px_-12px_rgba(0,0,0,0.6)]"
+        >
+          {/* Inner div to clip image */}
+          <div className="w-full h-full rounded-lg overflow-hidden relative">
             <Image
               src={image}
               alt={title}
               fill
-              className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+              className="object-cover object-top"
             />
           </div>
         </div>
       </div>
 
       {/* --- TEXT BELOW --- */}
-      <div className="flex items-center gap-2 mt-4 px-1">
-        <h3 className="text-white text-lg md:text-xl font-bold tracking-tight">
+      <div className="flex items-center gap-2 mt-2 px-1">
+        <h3 className="text-white text-lg md:text-lg font-bold tracking-tight">
           {title}
         </h3>
 
@@ -44,7 +47,7 @@ export default function ProjectCard({
           •
         </span>
 
-        <p className="text-[#8A8A8A] text-sm md:text-base font-medium">
+        <p className="text-[#8A8A8A] text-sm md:text-sm font-medium">
           {category}
         </p>
       </div>
