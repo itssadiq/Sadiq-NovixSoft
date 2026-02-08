@@ -54,7 +54,7 @@ export default function Journal() {
           <Link
             key={index}
             href={`/journal/${blog.slug}`}
-            className="group block bg-[#121212] p-2 md:p-3 rounded-[2rem] md:rounded-full transition-all duration-300 hover:bg-[#1a1a1a] cursor-pointer"
+            className="group block bg-[#121212] p-2 md:p-3 rounded-[1rem] md:rounded-full transition-all duration-300 hover:bg-[#1a1a1a] cursor-pointer"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-5">
               {/* IMAGE (No more movement on hover) */}

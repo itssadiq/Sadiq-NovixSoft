@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Nyx Portfolio",
+  title: "Sadiq Ali | Portfolio",
   description: "Web Design & Development",
 };
 
