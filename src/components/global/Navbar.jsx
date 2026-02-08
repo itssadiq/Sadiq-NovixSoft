@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 // 1. Import the icons
 import { Instagram, Facebook, Linkedin } from "lucide-react";
+import Button from "../ui/Button";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,12 +47,8 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Contact Button */}
-            <Link
-              href="/contact"
-              className="bg-[#262626] text-white text-sm font-medium px-6 py-2.5 rounded-full transition-all duration-300 hover:bg-[var(--color-accent)] hover:text-black"
-            >
-              Contact me
-            </Link>
+
+            <Button href={"/contact"}>Contact Me</Button>
           </div>
 
           {/* --- MOBILE HAMBURGER --- */}

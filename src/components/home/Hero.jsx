@@ -5,7 +5,8 @@ import { Twitter, Instagram, Linkedin, Zap } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="w-full min-h-[calc(100vh-80px)] flex flex-col justify-between px-1 md:px-2 pt-4 md:pt-10 pb-50 md:pb-16 max-w-[1400px] mx-auto">
+    // Updated mobile height to 75dvh as requested
+    <section className="w-full min-h-[75dvh] md:min-h-[calc(100vh-80px)] flex flex-col justify-between px-1 md:px-2 pt-8 md:pt-10 pb-12 md:pb-16 max-w-[1400px] mx-auto">
       {/* --- TOP SECTION: PROFILE & TEXT --- */}
       <div className="flex flex-col items-start gap-8 md:gap-6 w-full">
         {/* 1. Profile Pill */}
@@ -15,25 +16,25 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-col gap-1">
-            <h3 className="text-white font-large text-2xl">David Smith</h3>
+            <h3 className="text-white text-base font-medium">David Smith</h3>
             <div className="flex gap-3">
               <a
                 href="#"
                 className="text-[#8A8A8A] hover:text-white transition-colors"
               >
-                <Twitter size={18} />
+                <Twitter size={14} />
               </a>
               <a
                 href="#"
                 className="text-[#8A8A8A] hover:text-white transition-colors"
               >
-                <Instagram size={18} />
+                <Instagram size={14} />
               </a>
               <a
                 href="#"
                 className="text-[#8A8A8A] hover:text-white transition-colors"
               >
-                <Linkedin size={18} />
+                <Linkedin size={14} />
               </a>
             </div>
           </div>
@@ -53,11 +54,12 @@ export default function Hero() {
       </div>
 
       {/* --- BOTTOM SECTION: CTA & STATUS --- */}
-      <div className="flex flex-col md:flex-row items-start md:items-center w-full gap-4 md:gap-0">
+      <div className="flex flex-col md:flex-row items-start md:items-center w-full gap-4 md:gap-0 mt-auto md:mt-0">
         {/* CTA Button */}
+        {/* Removed shadow, removed translate. Added hover:bg-white */}
         <Link
           href="/contact"
-          className="group flex items-center gap-2 bg-[var(--color-accent)] text-black rounded-full font-bold transition-transform hover:bg-white  px-6 py-4 text-lg whitespace-nowrap"
+          className="group flex items-center gap-2 bg-[var(--color-accent)] text-black rounded-full font-bold transition-colors duration-300 hover:bg-white px-6 py-4 text-lg md:px-6 md:py-4 whitespace-nowrap"
         >
           <Zap
             className="group-hover:scale-110 transition-transform"
