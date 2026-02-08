@@ -3,6 +3,7 @@ import FeaturedWork from "../components/home/FeaturedWork"; // Import the sectio
 import About from "@/components/home/About";
 import Services from "@/components/home/Services";
 import Process from "@/components/home/MyProcess";
+import Testimonials from "@/components/home/Testimonials";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Services />
       <Process />
+      <Testimonials />
 
       {/* Other sections... */}
       <div className="h-20"></div>
