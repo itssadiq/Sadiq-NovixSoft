@@ -5,7 +5,7 @@ import { Twitter, Instagram, Linkedin, Zap } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="w-full min-h-[calc(100vh-80px)] flex flex-col justify-between px-1 md:px-6 pt-8 md:pt-10 pb-50 md:pb-16 max-w-[1400px] mx-auto">
+    <section className="w-full min-h-[calc(100vh-80px)] flex flex-col justify-between px-1 md:px-2 pt-4 md:pt-10 pb-50 md:pb-16 max-w-[1400px] mx-auto">
       {/* --- TOP SECTION: PROFILE & TEXT --- */}
       <div className="flex flex-col items-start gap-8 md:gap-6 w-full">
         {/* 1. Profile Pill */}
@@ -57,12 +57,12 @@ export default function Hero() {
         {/* CTA Button */}
         <Link
           href="/contact"
-          className="group flex items-center gap-2 bg-[var(--color-accent)] text-black rounded-full font-bold transition-transform hover:bg-white  px-8 py-4 text-md whitespace-nowrap"
+          className="group flex items-center gap-2 bg-[var(--color-accent)] text-black rounded-full font-bold transition-transform hover:bg-white  px-6 py-4 text-lg whitespace-nowrap"
         >
           <Zap
             className="group-hover:scale-110 transition-transform"
             fill="currentColor"
-            size={18}
+            size={16}
           />
           Start Your Project
         </Link>
