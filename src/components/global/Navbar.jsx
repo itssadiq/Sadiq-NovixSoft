@@ -16,16 +16,13 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // High-performance scroll check
       const offset = window.scrollY;
-      if (offset > 120) setIsScrolled(true);
-      else setIsScrolled(false);
+      setIsScrolled(offset > 120);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     if (isOpen) {
-      // Calculate scrollbar width only if not a touch device to prevent tablet jitter
       const hasTouch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
       const scrollBarWidth =
         window.innerWidth - document.documentElement.clientWidth;

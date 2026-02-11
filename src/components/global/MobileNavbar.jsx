@@ -12,7 +12,7 @@ export default function MobileNavbar({ links, isOpen, setIsOpen, isScrolled }) {
 
   return (
     <>
-      {/* 1. Static Top Bar */}
+      {/* 1. Static Top Mobile Bar */}
       <div className="md:hidden absolute top-0 left-0 w-full z-40 px-6 h-24 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <div className="w-10 h-10 border border-[var(--color-surface-3)] rounded-lg flex items-center justify-center">
@@ -27,7 +27,7 @@ export default function MobileNavbar({ links, isOpen, setIsOpen, isScrolled }) {
         </button>
       </div>
 
-      {/* 2. Sticky Toggle - Fixed within Content Grid */}
+      {/* 2. Sticky Toggle */}
       <div className="fixed top-6 left-0 w-full pointer-events-none z-[60]">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex justify-end">
           <button
@@ -43,7 +43,7 @@ export default function MobileNavbar({ links, isOpen, setIsOpen, isScrolled }) {
         </div>
       </div>
 
-      {/* 3. The Side Drawer - Optimized for Tablet Stability */}
+      {/* 3. The Side Drawer - Landscape Fix Implemented */}
       <div
         className={`fixed inset-0 z-[100] transition-all duration-500 ${isOpen ? "visible" : "invisible"}`}
       >
@@ -52,53 +52,60 @@ export default function MobileNavbar({ links, isOpen, setIsOpen, isScrolled }) {
           onClick={() => setIsOpen(false)}
         />
 
+        {/* 
+            DRAWER CONTAINER:
+            Added 'overflow-y-auto' and 'h-full' to ensure scrolling in Landscape.
+        */}
         <div
-          className={`absolute inset-y-0 right-0 h-full w-[85%] md:max-w-[400px] bg-[var(--color-background)] border-l border-[var(--color-surface-2)] transition-transform duration-700 ease-[cubic-bezier(0.7,0,0.3,1)] will-change-transform flex flex-col p-8 md:p-12 ${
+          className={`absolute inset-y-0 right-0 h-full w-[85%] md:max-w-[400px] bg-[var(--color-background)] border-l border-[var(--color-surface-2)] transition-transform duration-700 ease-[cubic-bezier(0.7,0,0.3,1)] will-change-transform flex flex-col overflow-y-auto overflow-x-hidden scrollbar-hide ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          {/* Close Header */}
-          <div className="flex justify-end">
-            <button
-              onClick={() => setIsOpen(false)}
-              className="text-[var(--color-text-main)] hover:rotate-90 transition-transform duration-500 cursor-pointer"
-            >
-              <X size={32} strokeWidth={1.5} />
-            </button>
-          </div>
-
-          {/* Links */}
-          <div className="flex flex-col gap-5 md:gap-7 mt-12">
-            {links.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-3xl md:text-4xl font-semibold text-[var(--color-text-main)] tracking-tight hover:text-[var(--color-accent)] transition-colors"
+          {/* Internal Wrapper to maintain mt-auto behavior in portrait but allow scroll in landscape */}
+          <div className="flex flex-col min-h-full p-8 md:p-12">
+            {/* Close Header */}
+            <div className="flex justify-end">
+              <button
                 onClick={() => setIsOpen(false)}
+                className="text-[var(--color-text-main)] hover:rotate-90 transition-transform duration-500 cursor-pointer"
               >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* Bottom Branding & CTA */}
-          <div className="mt-auto flex flex-col gap-10">
-            <div>
-              <Button href="/contact" onClick={() => setIsOpen(false)}>
-                Contact Me
-              </Button>
+                <X size={32} strokeWidth={1.5} />
+              </button>
             </div>
 
-            <div className="flex gap-6 pb-4">
-              {[Instagram, Linkedin, Facebook].map((Icon, i) => (
+            {/* Links Section */}
+            <div className="flex flex-col gap-5 md:gap-7 mt-12 mb-12">
+              {links.map((link) => (
                 <Link
-                  key={i}
-                  href="#"
-                  className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-main)] transition-colors"
+                  key={link.name}
+                  href={link.href}
+                  className="text-3xl md:text-4xl font-semibold text-[var(--color-text-main)] tracking-tight hover:text-[var(--color-accent)] transition-colors"
+                  onClick={() => setIsOpen(false)}
                 >
-                  <Icon size={24} />
+                  {link.name}
                 </Link>
               ))}
+            </div>
+
+            {/* Bottom Branding & CTA - mt-auto keeps it at bottom in portrait */}
+            <div className="mt-auto flex flex-col gap-10">
+              <div>
+                <Button href="/contact" onClick={() => setIsOpen(false)}>
+                  Contact Me
+                </Button>
+              </div>
+
+              <div className="flex gap-6 pb-4">
+                {[Instagram, Linkedin, Facebook].map((Icon, i) => (
+                  <Link
+                    key={i}
+                    href="#"
+                    className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-main)] transition-colors"
+                  >
+                    <Icon size={24} />
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
