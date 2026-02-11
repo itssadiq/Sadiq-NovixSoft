@@ -27,15 +27,15 @@ export default function MobileNavbar({ links, isOpen, setIsOpen, isScrolled }) {
         </button>
       </div>
 
-      {/* 2. Sticky Toggle */}
-      <div className="fixed top-6 left-0 w-full pointer-events-none z-[60]">
+      {/* 2. STICKY TOGGLE - Final Margin Adjustment */}
+      <div className="fixed top-8 md:top-10 left-0 w-full pointer-events-none z-[60]">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex justify-end">
           <button
             onClick={() => setIsOpen(true)}
-            className={`pointer-events-auto bg-[var(--color-background)]/90 border border-[var(--color-surface-2)] backdrop-blur-md rounded-full p-2 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] cursor-pointer shadow-2xl ${
+            className={`pointer-events-auto bg-[var(--color-background)]/90 border border-[var(--color-surface-2)] backdrop-blur-md rounded-full p-2.5 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] cursor-pointer shadow-[0_10px_30px_rgba(0,0,0,0.5)] ${
               isScrolled && !isOpen
                 ? "translate-y-0 opacity-100 scale-100"
-                : "-translate-y-28 opacity-0 scale-75"
+                : "-translate-y-32 opacity-0 scale-75"
             }`}
           >
             <Hamburger />
@@ -43,7 +43,7 @@ export default function MobileNavbar({ links, isOpen, setIsOpen, isScrolled }) {
         </div>
       </div>
 
-      {/* 3. The Side Drawer - Landscape Fix Implemented */}
+      {/* 3. The Side Drawer (Landscape & Tablet Optimized) */}
       <div
         className={`fixed inset-0 z-[100] transition-all duration-500 ${isOpen ? "visible" : "invisible"}`}
       >
@@ -52,18 +52,12 @@ export default function MobileNavbar({ links, isOpen, setIsOpen, isScrolled }) {
           onClick={() => setIsOpen(false)}
         />
 
-        {/* 
-            DRAWER CONTAINER:
-            Added 'overflow-y-auto' and 'h-full' to ensure scrolling in Landscape.
-        */}
         <div
           className={`absolute inset-y-0 right-0 h-full w-[85%] md:max-w-[400px] bg-[var(--color-background)] border-l border-[var(--color-surface-2)] transition-transform duration-700 ease-[cubic-bezier(0.7,0,0.3,1)] will-change-transform flex flex-col overflow-y-auto overflow-x-hidden scrollbar-hide ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          {/* Internal Wrapper to maintain mt-auto behavior in portrait but allow scroll in landscape */}
           <div className="flex flex-col min-h-full p-8 md:p-12">
-            {/* Close Header */}
             <div className="flex justify-end">
               <button
                 onClick={() => setIsOpen(false)}
@@ -73,7 +67,6 @@ export default function MobileNavbar({ links, isOpen, setIsOpen, isScrolled }) {
               </button>
             </div>
 
-            {/* Links Section */}
             <div className="flex flex-col gap-5 md:gap-7 mt-12 mb-12">
               {links.map((link) => (
                 <Link
@@ -87,7 +80,6 @@ export default function MobileNavbar({ links, isOpen, setIsOpen, isScrolled }) {
               ))}
             </div>
 
-            {/* Bottom Branding & CTA - mt-auto keeps it at bottom in portrait */}
             <div className="mt-auto flex flex-col gap-10">
               <div>
                 <Button href="/contact" onClick={() => setIsOpen(false)}>
