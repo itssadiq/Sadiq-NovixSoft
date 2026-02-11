@@ -15,18 +15,28 @@ export default function Navbar() {
   ];
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 100);
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      // High-performance scroll check
+      const offset = window.scrollY;
+      if (offset > 120) setIsScrolled(true);
+      else setIsScrolled(false);
+    };
 
-    // Industry-standard Anti-Shake Logic using Theme Vars
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
     if (isOpen) {
+      // Calculate scrollbar width only if not a touch device to prevent tablet jitter
+      const hasTouch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
       const scrollBarWidth =
         window.innerWidth - document.documentElement.clientWidth;
+
       document.body.style.overflow = "hidden";
-      document.body.style.paddingRight = `${scrollBarWidth}px`;
+      if (!hasTouch && scrollBarWidth > 0) {
+        document.body.style.paddingRight = `${scrollBarWidth}px`;
+      }
     } else {
-      document.body.style.overflow = "unset";
-      document.body.style.paddingRight = "0px";
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
     }
 
     return () => window.removeEventListener("scroll", handleScroll);
