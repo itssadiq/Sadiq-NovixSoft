@@ -18,7 +18,7 @@ export default function Navbar() {
     const handleScroll = () => setIsScrolled(window.scrollY > 100);
     window.addEventListener("scroll", handleScroll);
 
-    // Anti-Shake Logic for all browsers/OS
+    // Industry-standard Anti-Shake Logic using Theme Vars
     if (isOpen) {
       const scrollBarWidth =
         window.innerWidth - document.documentElement.clientWidth;
