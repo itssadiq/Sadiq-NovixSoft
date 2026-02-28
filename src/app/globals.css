@@ -1,110 +1,139 @@
 @import "tailwindcss";
 
-/* --- THEME VARIABLES --- */
+/* 1. SETUP THEME VARIABLES */
 @theme {
-  /* This connects CSS vars to Tailwind classes like bg-background or text-accent */
-  --color-background: #0d0d0d;
-  --color-surface-1: #121212;
-  --color-surface-2: #1a1a1a;
-  --color-surface-3: #262626;
+  /* Colors */
+  --color-primary: #bdff31;
+  --color-black: #010202;
+  --color-white: #ffffff;
+  --color-dim-grey: #676767;
 
-  --color-text-main: #ffffff;
-  --color-text-secondary: #8a8a8a;
-  --color-text-link: #c2c2c2;
-
-  --color-accent: #82ff1c;
+  /* Fonts - UPDATED TO FIGTREE */
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* --- BASE STYLES --- */
-body {
-  background-color: var(--color-background);
-  color: var(--color-text-main);
-  font-family: var(--font-inter), sans-serif;
-  overflow-x: hidden;
-}
+/* 2. DEFINE TYPOGRAPHY SYSTEM */
 
-/* --- TYPOGRAPHY UTILITIES --- */
-/* Based on your specifications */
-
-@layer utilities {
-  /* H1: 88px, SemiBold */
-  .text-h1 {
-    font-size: 88px;
-    font-weight: 600;
-    letter-spacing: -0.05em;
-    line-height: 1.1;
-  }
-
-  /* H2: 40px, Medium */
-  .text-h2 {
+@layer base {
+  /* H1: Weight:Medium, Styles:Bold(Italic), Color: Black, Size:40px */
+  h1,
+  .type-h1 {
     font-size: 40px;
     font-weight: 500;
-    letter-spacing: -0.05em;
+    color: var(--color-black);
     line-height: 1.2;
   }
 
-  /* H3: 24px, Regular */
-  .text-h3 {
+  /* H2: Weight:Medium, Styles:Bold(Italic), Color: Black, Size:32px */
+  h2,
+  .type-h2 {
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--color-black);
+    line-height: 1.2;
+  }
+
+  /* H3: Weight:Medium, Styles:Bold(Italic), Color: Black, Size:24px */
+  h3,
+  .type-h3 {
     font-size: 24px;
-    font-weight: 400;
-    letter-spacing: -0.04em;
+    font-weight: 500;
+    color: var(--color-black);
     line-height: 1.3;
   }
 
-  /* H4: 20px, Regular */
-  .text-h4 {
+  /* H4: Weight:Medium, Styles:Bold(Italic), Color: Black, Size:20px */
+  h4,
+  .type-h4 {
     font-size: 20px;
-    font-weight: 400;
-    letter-spacing: -0.04em;
+    font-weight: 500;
+    color: var(--color-black);
     line-height: 1.4;
   }
 
-  /* Body L: 60px, Medium */
-  .text-body-l {
-    font-size: 60px;
-    font-weight: 500;
-    letter-spacing: -0.05em;
-    line-height: 1.1;
+  /* H5: Weight:Semibold, Styles:Bold(Italic), Color: Black, Size:16px */
+  h5,
+  .type-h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-black);
+    line-height: 1.4;
   }
 
-  /* Body M: 22px, Regular */
-  .text-body-m {
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    line-height: 1.5;
-  }
-
-  /* Body Regular: 18px, Medium */
-  .text-body-reg {
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: -0.03em;
-    line-height: 1.6;
-    color: var(--color-text-secondary);
-  }
-
-  /* Body S: 14px, Medium */
-  .text-body-sm {
+  /* H6: Weight:Medium, Styles:Bold(Italic), Color: Black, Size:14px */
+  h6,
+  .type-h6 {
     font-size: 14px;
     font-weight: 500;
-    letter-spacing: 0em;
-    line-height: 1.6;
-    color: var(--color-text-secondary);
+    color: var(--color-black);
+    line-height: 1.4;
+  }
+
+  /* Body Defaults */
+  body {
+    background-color: var(--color-white);
+    color: var(--color-dim-grey);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-sans);
   }
 }
 
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
+@layer utilities {
+  /* Body Large */
+  .type-body-large {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-dim-grey);
   }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 
-.animate-marquee {
-  display: flex;
-  width: max-content;
-  animation: marquee 20s linear infinite;
+  /* Body */
+  .type-body {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-dim-grey);
+  }
+
+  /* Body 500 */
+  .type-body-500 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-dim-grey);
+  }
+
+  /* Body Small */
+  .type-body-small {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-dim-grey);
+  }
+
+  /* Body Small 500 */
+  .type-body-small-500 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-dim-grey);
+  }
+
+  /* Btn Text */
+  .type-btn {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-black);
+  }
+
+  /* Nav Link */
+  .type-nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-black);
+  }
+
+  /* Caption */
+  .type-caption {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-dim-grey);
+  }
 }
