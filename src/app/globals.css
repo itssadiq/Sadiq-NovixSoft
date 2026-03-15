@@ -84,7 +84,7 @@
   .type-body-large {
     font-size: 18px;
     font-weight: 400;
-    color: var(--color-dim-grey);
+    color: var(--color-black);
   }
 
   /* Body */
@@ -135,5 +135,24 @@
     font-size: 12px;
     font-weight: 500;
     color: var(--color-dim-grey);
+  }
+}
+
+/* ... existing code ... */
+
+@layer utilities {
+  /* Marquee Animation */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-scroll {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
   }
 }
