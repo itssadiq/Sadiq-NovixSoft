@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ActionButton({ text, icon }) {
   return (
-    <button className="group flex items-center focus:outline-none">
+    <button className="group flex items-center focus:outline-none cursor-pointer">
       {/* --- TEXT PILL --- */}
       {/* Sits underneath the icon, bg goes black on hover */}
       <div className="relative z-0 flex items-center justify-center h-[40px] px-5 border border-[var(--color-black)] rounded-full bg-[var(--color-white)] transition-colors duration-300 group-hover:bg-[var(--color-black)]">

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ActionButton from "./ActionButton";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,15 +44,10 @@ export default function Navbar() {
         {/* Right: Button (Desktop) & Menu (Mobile) */}
         <div className="flex items-center gap-4">
           {/* Desktop Button */}
-          <Link
-            href="#contact"
-            className="hidden md:flex items-center gap-3 pl-5 pr-1 py-1 rounded-full border border-black hover:bg-gray-50 transition-colors"
-          >
-            <span className="type-btn !not-italic">Let's Talk</span>
-            <span className="w-8 h-8 rounded-full bg-black flex items-center justify-center text-lg">
-              👋
-            </span>
-          </Link>
+          <ActionButton
+            text="Let's Talk"
+            icon={<span className="text-xl leading-none">👋</span>}
+          />
 
           {/* Mobile Hamburger */}
           <button
