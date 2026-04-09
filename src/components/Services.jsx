@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import CTAButton from "./CTAButton";
 
 export default function Services() {
   const services = [
@@ -87,36 +88,9 @@ export default function Services() {
       </div>
 
       {/* --- BLACK CTA BAR --- */}
-      <div className="w-full bg-[var(--color-black)] py-6 mt-12">
+      <div className="w-full bg-[var(--color-black)] py-4 mt-12">
         <div className="max-w-[1400px] mx-auto px-6 flex items-center">
-          <Link
-            href="#contact"
-            className="group flex items-center focus:outline-none"
-          >
-            {/* White Pill with White Border */}
-            <div className="relative z-0 flex items-center justify-center h-[44px] px-6 border border-white rounded-full bg-transparent transition-colors duration-300 group-hover:bg-white/10">
-              <span className="type-btn !text-white">
-                Need Support on a Project?
-              </span>
-            </div>
-
-            {/* Overlapping White Circle with Black Arrow */}
-            <div className="relative z-10 -ml-4 flex items-center justify-center shrink-0 w-[44px] h-[44px] bg-white rounded-full transition-transform duration-300 group-hover:rotate-45">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="black"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
-            </div>
-          </Link>
+          <CTAButton text="Need Support on a Project?" href="#contact" />
         </div>
       </div>
     </section>
