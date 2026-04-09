@@ -1,5 +1,7 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import ProblemSolution from "@/components/ProblemSolution";
+import Works from "@/components/Works";
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
 
       {/* --- HERO SECTION --- */}
       <Hero />
+      <Works />
+      <ProblemSolution />
     </div>
   );
 }
