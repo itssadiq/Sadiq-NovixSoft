@@ -1,0 +1,65 @@
+import React from "react";
+
+export default function Process() {
+  const steps = [
+    {
+      number: "01",
+      title: "Discovery & Development",
+      description:
+        "Understand project requirements, scope, and goals. Build clean, scalable website ready for client review.",
+    },
+    {
+      number: "02",
+      title: "Testing & Deployment",
+      description:
+        "Deploy tested website efficiently for performance, and smooth user experience.",
+    },
+    {
+      number: "03",
+      title: "Revisions & Delivery",
+      description:
+        "Handle revisions seamlessly to meet client expectations, then deliver a fully structured, client-ready project.",
+    },
+  ];
+
+  return (
+    <section id="process" className="w-full bg-[var(--color-white)] py-24">
+      <div className="max-w-[1400px] mx-auto px-6">
+        {/* SECTION HEADER */}
+        <div className="flex items-center gap-4 mb-20">
+          <div className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center border border-gray-300">
+            <div className="w-2 h-2 rounded-full bg-black"></div>
+          </div>
+          <h5 className="type-h5 tracking-tight uppercase font-bold text-[var(--color-black)]">
+            Work Process
+          </h5>
+        </div>
+
+        {/* PROCESS GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className={`flex flex-col gap-6 py-12 md:py-0 
+                ${index !== 0 ? "border-t md:border-t-0 md:border-l" : ""} 
+                ${index === 1 ? "md:px-4 lg:pl-10" : ""}
+                ${index === 2 ? "md:pl-4 lg:px-8" : ""}
+                ${index === 0 ? "md:pr-4 lg:pr-10 pb-12 md:pb-0" : ""}
+                border-gray-100 transition-colors duration-500 hover:bg-gray-50/30 group
+              `}
+            >
+              {/* STEP NUMBER */}
+              <span className="type-h2">{step.number}</span>
+
+              {/* STEP TITLE */}
+              <h4 className="type-h3">{step.title}</h4>
+
+              {/* STEP DESCRIPTION */}
+              <p className="type-body">{step.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
