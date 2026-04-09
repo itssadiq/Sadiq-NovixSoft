@@ -39,7 +39,7 @@ export default function ProblemSolution() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-stretch">
           {/* COLUMN 1: IMAGE (Centered on mobile, Left on desktop) */}
           <div className="w-full lg:w-[300px] shrink-0 flex justify-center lg:justify-start">
-            <div className="relative aspect-[4/5] w-[220px] md:w-[260px] lg:w-[300px] overflow-hidden rounded-[32px] bg-gray-100 border border-gray-100 shadow-sm">
+            <div className="relative aspect-[4/5] w-[220px] md:w-[260px] lg:w-[300px] overflow-hidden rounded-[15px] bg-gray-100 border border-gray-100 shadow-sm">
               <Image
                 src={Profile}
                 alt="Profile"
@@ -53,14 +53,14 @@ export default function ProblemSolution() {
           <div className="flex-1 flex flex-col sm:flex-row items-stretch gap-0">
             {/* PROBLEM LIST - justify-center aligns content vertically on desktop */}
             <div className="flex-1 flex flex-col justify-center pb-10 sm:pb-0 sm:pr-10 lg:pr-16">
-              <h4 className="type-h6 uppercase tracking-widest font-bold mb-10 text-[var(--color-black)]">
+              <h4 className="type-h6 uppercase tracking-widest mb-10">
                 Common Issues
               </h4>
               <ul className="flex flex-col gap-6 md:gap-8">
                 {problems.map((item, i) => (
                   <li key={i} className="flex items-start gap-4">
                     <CrossIcon className="w-4 h-4 text-black mt-1 shrink-0" />
-                    <span className="type-body-large leading-tight text-[var(--color-black)] font-medium">
+                    <span className="type-body-large leading-tight">
                       {item}
                     </span>
                   </li>
@@ -73,14 +73,14 @@ export default function ProblemSolution() {
 
             {/* SOLUTION LIST - justify-center aligns content vertically on desktop */}
             <div className="flex-1 flex flex-col justify-center pt-10 sm:pt-0 sm:pl-10 lg:pl-16">
-              <h4 className="type-h6 uppercase tracking-widest font-bold mb-10 text-[var(--color-black)]">
+              <h4 className="type-h6 uppercase tracking-widest mb-10">
                 How I work
               </h4>
               <ul className="flex flex-col gap-6 md:gap-8">
                 {solutions.map((item, i) => (
                   <li key={i} className="flex items-start gap-4">
                     <CheckIcon className="w-4 h-4 text-black mt-1 shrink-0" />
-                    <span className="type-body-large leading-tight text-[var(--color-black)] font-medium">
+                    <span className="type-body-large leading-tight">
                       {item}
                     </span>
                   </li>

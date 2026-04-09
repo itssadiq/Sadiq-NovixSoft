@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import ProblemSolution from "@/components/ProblemSolution";
+import Services from "@/components/Services";
 import Works from "@/components/Works";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Works />
       <ProblemSolution />
+      <Services />
     </div>
   );
 }
