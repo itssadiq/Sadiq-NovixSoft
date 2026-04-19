@@ -18,7 +18,7 @@ export const projectsData = [
     id: "nova-real-estate",
     title: "Nova Real Estate",
     description:
-      "A high-end property listing platform designed for modern agencies looking to showcase luxury estates with high-impact visuals.",
+      "A high-end property listing platform designed for modern agencies looking to showcase luxury estates.",
     client: "Nova Group",
     tools: "Next.js, Tailwind",
     year: "2025",
@@ -27,6 +27,36 @@ export const projectsData = [
       main: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800",
       secondary:
         "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+    },
+  },
+  {
+    id: "car-wash-detailing",
+    title: "Dlux Car Wash",
+    description:
+      "Premium detailing service website with a focus on booking conversion and high-quality portfolio display.",
+    client: "Dlux Detailing",
+    tools: "WordPress, Elementor",
+    year: "2024",
+    service: "Website Redesign",
+    images: {
+      main: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800",
+      secondary:
+        "https://images.unsplash.com/photo-1552933061-90320ee70125?w=800",
+    },
+  },
+  {
+    id: "agency-portfolio",
+    title: "Creative Agency",
+    description:
+      "A dark-themed portfolio for a digital agency specializing in high-end animation and 3D web experiences.",
+    client: "Studio X",
+    tools: "Three.js, React",
+    year: "2024",
+    service: "Custom Build",
+    images: {
+      main: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800",
+      secondary:
+        "https://images.unsplash.com/photo-1542744094-24638eff58bb?w=800",
     },
   },
 ];
