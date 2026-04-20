@@ -4,6 +4,7 @@ import AboutMe from "@/components/AboutMe";
 import Process from "@/components/Process";
 import Services from "@/components/Services";
 import Works from "@/components/Works";
+import Reviews from "@/components/Reviews";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <AboutMe />
       <Services />
       <Process />
+      <Reviews />
     </div>
   );
 }
