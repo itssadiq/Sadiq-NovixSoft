@@ -1,0 +1,111 @@
+"use client";
+import React, { useState } from "react";
+import { FaLinkedinIn, FaChevronRight } from "react-icons/fa6";
+import SocialLink from "./SocialLink";
+
+export default function Reviews() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const reviewsData = [
+    {
+      id: 1,
+      text: "Working with Sadiq was a breeze. His attention to detail and creativity transformed our website. He understood our vision perfectly and delivered beyond expectations. Communication was prompt and clear throughout the project. Sadiq's UI/UX skills are top-notch, and we look forward to collaborating with him again in the future.",
+      name: "Nathan Ward",
+      role: "HELLOBAND - CO FOUNDER",
+    },
+    {
+      id: 2,
+      text: "Sadiq is a highly reliable developer who consistently delivers clean, agency-grade code. His ability to handle complex WordPress builds while maintaining fast turnaround times has made him an invaluable partner for our client delivery.",
+      name: "Sarah Jenkins",
+      role: "DIGITAL STRATEGIST - AGENCY X",
+    },
+  ];
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev + 1) % reviewsData.length);
+  };
+
+  return (
+    <section
+      id="reviews"
+      className="w-full bg-[var(--color-white)] pt-16 md:pt-24 pb-16 md:pb-24"
+    >
+      <div className="max-w-[1400px] mx-auto px-6">
+        {/* MAIN WRAPPER - items-stretch forces the lime box to match the content height */}
+        <div className="flex flex-col lg:flex-row items-stretch gap-10 lg:gap-0">
+          {/* COLUMN 1: LEFT BOX (25% on Desktop, 75% on Mobile) */}
+          <div className="w-[75%] md:w-[60%] lg:w-[25%] mx-auto lg:mx-0 shrink-0 lg:pr-10">
+            <div className="w-full h-full rounded-[24px] bg-[var(--color-primary)] p-8 flex flex-col items-center justify-center text-center shadow-sm">
+              <h3 className="type-h3 !text-[22px] leading-tight mb-6">
+                Trusted across the board
+              </h3>
+
+              <div className="flex flex-col items-center gap-3">
+                <span className="text-[10px] uppercase tracking-[0.15em] font-bold opacity-70">
+                  Check all reviews on
+                </span>
+
+                {/* LinkedIn Button with your requested hover logic */}
+                <div className="bg-black text-white hover:bg-white hover:text-black rounded-full transition-all duration-300">
+                  <SocialLink href="#" label="LinkedIn" icon={FaLinkedinIn} />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* COLUMN 2: REVIEWS CONTENT (75% on Desktop) */}
+          <div className="flex-1 lg:pl-16 flex flex-col justify-start py-2">
+            {/* Header stays static */}
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center border border-gray-300">
+                <div className="w-2 h-2 rounded-full bg-black"></div>
+              </div>
+              <h5 className="type-h5 tracking-tight uppercase font-bold text-[var(--color-black)]">
+                Clients Speak to me
+              </h5>
+            </div>
+
+            {/* THE "GRID STACK" - This prevents layout jumping */}
+            <div className="relative w-full pr-14 md:pr-20 grid grid-cols-1 grid-rows-1">
+              {reviewsData.map((review, index) => (
+                <div
+                  key={review.id}
+                  className={`
+                    col-start-1 row-start-1 flex flex-col transition-all duration-500 ease-in-out
+                    ${index === activeIndex ? "opacity-100 translate-x-0 pointer-events-auto" : "opacity-0 translate-x-10 pointer-events-none"}
+                  `}
+                >
+                  <blockquote className="max-w-[850px] mb-8">
+                    <p className="type-body-large text-[18px] md:text-[22px] leading-relaxed text-[var(--color-dim-grey)] italic">
+                      &quot;{review.text}&quot;
+                    </p>
+                  </blockquote>
+
+                  <div className="flex flex-col">
+                    <span className="type-h4 !text-[18px] font-bold">
+                      {review.name}
+                    </span>
+                    <span className="type-caption uppercase text-[var(--color-dim-grey)] font-bold mt-1 tracking-widest">
+                      {review.role}
+                    </span>
+                  </div>
+                </div>
+              ))}
+
+              {/* Navigation Arrow - Vertically centered on the right edge */}
+              {reviewsData.length > 1 && (
+                <button
+                  onClick={handleNext}
+                  className="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-gray-100 hover:bg-black flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 z-10 cursor-pointer"
+                  aria-label="Next review"
+                >
+                  <FaChevronRight className="text-xl" />
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

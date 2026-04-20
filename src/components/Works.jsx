@@ -17,7 +17,7 @@ export default function Works() {
     >
       <div className="max-w-[1400px] mx-auto px-6">
         {/* SECTION HEADER */}
-        <div className="flex items-center gap-4 mb-20 md:mb-32">
+        <div className="flex items-center gap-4 mb-10 md:mb-16">
           <div className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center border border-gray-300">
             <div className="w-2 h-2 rounded-full bg-black"></div>
           </div>
@@ -27,23 +27,26 @@ export default function Works() {
         </div>
 
         {/* PROJECTS LIST */}
-        <div className="flex flex-col gap-32 md:gap-48 mb-20 md:mb-32">
+        <div className="flex flex-col gap-24 md:gap-32">
           {featuredProjects.map((project) => (
             <ProjectShowcase key={project.id} project={project} />
           ))}
         </div>
       </div>
 
-      <div className="w-full bg-[var(--color-black)] py-4 mt-12">
-        <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
+      {/* --- ADJUSTED BOTTOM BAR --- */}
+      <div className="w-full bg-[var(--color-black)] py-4 mt-20 md:mt-32">
+        <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-10 md:gap-0">
+          {/* Top: Main Button */}
           <CTAButton text="View All Projects" href="#contact" />
 
-          <div className="flex items-center gap-6">
-            <span className="text-white text-[13px] font-medium">
+          {/* Bottom Group: Label + Socials */}
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
+            <span className="text-white text-[16px] md:text-[13px] font-medium lowercase">
               check my creativity
             </span>
 
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
               <SocialLink href="#" label="LinkedIn" icon={FaLinkedinIn} />
               <SocialLink href="#" label="Instagram" icon={FaInstagram} />
             </div>
