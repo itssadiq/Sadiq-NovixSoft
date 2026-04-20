@@ -28,14 +28,15 @@ export default function Reviews() {
   return (
     <section
       id="reviews"
-      className="w-full bg-[var(--color-white)] pt-16 md:pt-24 pb-16 md:pb-24"
+      // RULE: Standardized Section Padding
+      className="w-full bg-[var(--color-white)] pt-20 md:pt-32 pb-20 md:pb-32"
     >
       <div className="max-w-[1400px] mx-auto px-6">
-        {/* MAIN WRAPPER - items-stretch forces the lime box to match the content height */}
+        {/* MAIN WRAPPER */}
         <div className="flex flex-col lg:flex-row items-stretch gap-10 lg:gap-0">
-          {/* COLUMN 1: LEFT BOX (25% on Desktop, 75% on Mobile) */}
+          {/* COLUMN 1: LEFT BOX (25%) */}
           <div className="w-[75%] md:w-[60%] lg:w-[25%] mx-auto lg:mx-0 shrink-0 lg:pr-10">
-            <div className="w-full h-full rounded-[24px] bg-[var(--color-primary)] p-8 flex flex-col items-center justify-center text-center shadow-sm">
+            <div className="w-full h-full rounded-[24px] bg-[var(--color-primary)] p-8 flex flex-col items-center justify-center text-center">
               <h3 className="type-h3 !text-[22px] leading-tight mb-6">
                 Trusted across the board
               </h3>
@@ -45,7 +46,6 @@ export default function Reviews() {
                   Check all reviews on
                 </span>
 
-                {/* LinkedIn Button with your requested hover logic */}
                 <div className="bg-black text-white hover:bg-white hover:text-black rounded-full transition-all duration-300">
                   <SocialLink href="#" label="LinkedIn" icon={FaLinkedinIn} />
                 </div>
@@ -53,10 +53,10 @@ export default function Reviews() {
             </div>
           </div>
 
-          {/* COLUMN 2: REVIEWS CONTENT (75% on Desktop) */}
+          {/* COLUMN 2: REVIEWS CONTENT (75%) */}
           <div className="flex-1 lg:pl-16 flex flex-col justify-start py-2">
-            {/* Header stays static */}
-            <div className="flex items-center gap-4 mb-8">
+            {/* SECTION HEADER - Aligned with Rule: mb-10 md:mb-16 */}
+            <div className="flex items-center gap-4 mb-10 md:mb-16">
               <div className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center border border-gray-300">
                 <div className="w-2 h-2 rounded-full bg-black"></div>
               </div>
@@ -65,7 +65,7 @@ export default function Reviews() {
               </h5>
             </div>
 
-            {/* THE "GRID STACK" - This prevents layout jumping */}
+            {/* THE "GRID STACK" */}
             <div className="relative w-full pr-14 md:pr-20 grid grid-cols-1 grid-rows-1">
               {reviewsData.map((review, index) => (
                 <div
@@ -85,14 +85,14 @@ export default function Reviews() {
                     <span className="type-h4 !text-[18px] font-bold">
                       {review.name}
                     </span>
-                    <span className="type-caption uppercase text-[var(--color-dim-grey)] font-bold mt-1 tracking-widest">
+                    <span className="type-caption uppercase text-[var(--color-dim-grey)] font-bold mt-1 tracking-[0.15em] text-[10px]">
                       {review.role}
                     </span>
                   </div>
                 </div>
               ))}
 
-              {/* Navigation Arrow - Vertically centered on the right edge */}
+              {/* Navigation Arrow */}
               {reviewsData.length > 1 && (
                 <button
                   onClick={handleNext}

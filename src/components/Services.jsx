@@ -42,7 +42,7 @@ export default function Services() {
       className="w-full bg-[var(--color-white)] pt-20 md:pt-32 pb-0"
     >
       <div className="max-w-[1400px] mx-auto px-6">
-        {/* SECTION HEADER - Standardized Heading Gap: mb-10 md:mb-16 */}
+        {/* SECTION HEADER - Standardized Spacing */}
         <div className="flex flex-col gap-6 mb-10 md:mb-16">
           <div className="flex items-center gap-4">
             <div className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center border border-gray-300">
@@ -53,7 +53,6 @@ export default function Services() {
             </h5>
           </div>
 
-          {/* INTRO PARAGRAPH */}
           <p className="type-body-large text-[var(--color-dim-grey)] max-w-2xl leading-relaxed">
             Flexible development across WordPress and custom builds. Designed
             for agency workflows, with client-ready revisions.
@@ -61,13 +60,13 @@ export default function Services() {
         </div>
 
         {/* SERVICES LIST */}
-        <div className="flex flex-col border-t border-black/10">
+        <div className="flex flex-col border-t border-[var(--color-black)]">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group w-full border-b border-black/10 py-10 transition-colors hover:bg-gray-50/50"
+              className="w-full border-b border-[var(--color-black)] py-10"
             >
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-12">
+              <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 md:gap-12">
                 <div className="w-full md:w-[25%] shrink-0">
                   <h3 className="type-h3">{service.title}</h3>
                 </div>
@@ -79,7 +78,7 @@ export default function Services() {
                 </div>
 
                 <div className="w-full md:w-[15%] flex md:justify-end">
-                  <span className="type-body font-medium">
+                  <span className="type-body font-medium text-[var(--color-black)]">
                     [ {service.timeline} ]
                   </span>
                 </div>
@@ -89,12 +88,10 @@ export default function Services() {
         </div>
       </div>
 
-      {/* --- BLACK CTA BAR - Consistent with Works Layout --- */}
+      {/* BLACK CTA BAR - Consistent with Works Ribbon Rule */}
       <div className="w-full bg-[var(--color-black)] py-4 mt-20 md:mt-32">
-        <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-10 md:gap-0">
+        <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between">
           <CTAButton text="Need Support on a Project?" href="#contact" />
-
-          {/* Note: If you want to add social links here too, the container is already prepared */}
         </div>
       </div>
     </section>

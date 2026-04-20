@@ -1,5 +1,4 @@
 import React from "react";
-import CTAButton from "./CTAButton";
 
 export default function Process() {
   const steps = [
@@ -26,11 +25,10 @@ export default function Process() {
   return (
     <section
       id="process"
-      // Standardized Section Top Padding
-      className="w-full bg-[var(--color-white)] pt-20 md:pt-32 pb-0"
+      className="w-full bg-[var(--color-white)] pt-20 md:pt-32 pb-20 md:pb-32"
     >
       <div className="max-w-[1400px] mx-auto px-6">
-        {/* SECTION HEADER - Standardized Heading Gap: mb-10 md:mb-16 */}
+        {/* SECTION HEADER - Global Standard Spacing */}
         <div className="flex items-center gap-4 mb-10 md:mb-16">
           <div className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center border border-gray-300">
             <div className="w-2 h-2 rounded-full bg-black"></div>
@@ -40,17 +38,17 @@ export default function Process() {
           </h5>
         </div>
 
-        {/* PROCESS GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-3">
+        {/* PROCESS GRID - Standardized Border to match Services/Works */}
+        <div className="grid grid-cols-1 md:grid-cols-3 border-t border-[var(--color-black)]">
           {steps.map((step, index) => (
             <div
               key={index}
-              className={`flex flex-col gap-6 py-12 md:py-0 
+              className={`flex flex-col gap-6 pt-10 pb-12 md:pb-0 
                 ${index !== 0 ? "border-t md:border-t-0 md:border-l" : ""} 
-                ${index === 1 ? "md:px-4 lg:pl-10" : ""}
-                ${index === 2 ? "md:pl-4 lg:px-8" : ""}
-                ${index === 0 ? "md:pr-4 lg:pr-10 pb-12 md:pb-0" : ""}
-                border-gray-100
+                ${index === 1 ? "md:px-8 lg:px-12" : ""}
+                ${index === 2 ? "md:pl-8 lg:pl-12" : ""}
+                ${index === 0 ? "md:pr-8 lg:pr-12" : ""}
+                border-[var(--color-black)]
               `}
             >
               {/* STEP NUMBER */}
@@ -60,7 +58,9 @@ export default function Process() {
               <h4 className="type-h3">{step.title}</h4>
 
               {/* STEP DESCRIPTION */}
-              <p className="type-body">{step.description}</p>
+              <p className="type-body text-[var(--color-dim-grey)]">
+                {step.description}
+              </p>
             </div>
           ))}
         </div>
