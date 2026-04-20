@@ -58,48 +58,29 @@ export default function Hero() {
 
       {/* BOTTOM WRAPPER */}
       <div className={`w-full flex flex-col ${revealClasses("delay-500")}`}>
-        {/* STATS SECTION */}
+        {/* REVIEW SECTION (REPLACED STATS) */}
         <section className="w-full border-t border-[var(--color-black)]">
           <div className="max-w-[1400px] mx-auto w-full px-6 flex flex-col md:flex-row">
-            <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-5 md:gap-y-0 py-4 md:py-9 md:pr-12 md:border-r border-[var(--color-black)]">
-              <div className="flex flex-col gap-1">
-                <span className="text-[28px] font-medium text-[var(--color-black)] leading-none tracking-tight">
-                  10+
-                </span>
-                <span className="type-body-small text-[12px] md:text-[14px] text-[var(--color-dim-grey)]">
-                  Projects Delivered
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-1">
-                <span className="text-[28px] font-medium text-[var(--color-black)] leading-none tracking-tight">
-                  48-72 hrs
-                </span>
-                <span className="type-body-small text-[12px] md:text-[14px] text-[var(--color-dim-grey)]">
-                  Avg. Delivery Time
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-1">
-                <span className="text-[28px] font-medium text-[var(--color-black)] leading-none tracking-tight">
-                  {"<08 hrs"}
-                </span>
-                <span className="type-body-small text-[12px] md:text-[14px] text-[var(--color-dim-grey)]">
-                  Response Time
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-1">
-                <span className="text-[28px] font-medium text-[var(--color-black)] leading-none tracking-tight">
-                  100%
-                </span>
-                <span className="type-body-small text-[12px] md:text-[14px] text-[var(--color-dim-grey)]">
-                  On Time Delivery
-                </span>
-              </div>
+            {/* Review Content */}
+            <div className="flex-1 py-5 md:pr-12 md:border-r border-[var(--color-black)] flex flex-col justify-center">
+              <blockquote className="max-w-[700px]">
+                <p className="type-h5 italic">
+                  “It&apos;s all You. Your progress and understanding is going
+                  at an amazing pace. Great execution, Sadiq.”
+                </p>
+                <footer className="flex flex-col">
+                  <span className="type-body-500 text-[var(--color-black)] font-semibold">
+                    Muhammad Aun
+                  </span>
+                  <span className="type-body-small uppercase">
+                    Account Manager — Team Adver
+                  </span>
+                </footer>
+              </blockquote>
             </div>
 
-            <div className="py-4 md:py-8 md:pl-16 flex items-center justify-start md:min-w-[280px]">
+            {/* Action Button Area */}
+            <div className="py-6 md:pl-16 flex items-center justify-start md:min-w-[320px]">
               <ActionButton
                 text="Let's Work Together"
                 icon={<span className="text-xl leading-none">👨‍💼</span>}
