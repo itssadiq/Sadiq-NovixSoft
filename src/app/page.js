@@ -1,8 +1,7 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import ProblemSolution from "@/components/ProblemSolution";
+import AboutMe from "@/components/AboutMe";
 import Process from "@/components/Process";
-import ProjectDetailSection from "@/components/ProjectShowcase";
 import Services from "@/components/Services";
 import Works from "@/components/Works";
 
@@ -14,7 +13,7 @@ export default function Home() {
       {/* --- HERO SECTION --- */}
       <Hero />
       <Works />
-      <ProblemSolution />
+      <AboutMe />
       <Services />
       <Process />
     </div>

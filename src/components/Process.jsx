@@ -1,4 +1,5 @@
 import React from "react";
+import CTAButton from "./CTAButton";
 
 export default function Process() {
   const steps = [
@@ -23,10 +24,14 @@ export default function Process() {
   ];
 
   return (
-    <section id="process" className="w-full bg-[var(--color-white)] py-24">
+    <section
+      id="process"
+      // Standardized Section Top Padding
+      className="w-full bg-[var(--color-white)] pt-20 md:pt-32 pb-0"
+    >
       <div className="max-w-[1400px] mx-auto px-6">
-        {/* SECTION HEADER */}
-        <div className="flex items-center gap-4 mb-20">
+        {/* SECTION HEADER - Standardized Heading Gap: mb-10 md:mb-16 */}
+        <div className="flex items-center gap-4 mb-10 md:mb-16">
           <div className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center border border-gray-300">
             <div className="w-2 h-2 rounded-full bg-black"></div>
           </div>
@@ -45,7 +50,7 @@ export default function Process() {
                 ${index === 1 ? "md:px-4 lg:pl-10" : ""}
                 ${index === 2 ? "md:pl-4 lg:px-8" : ""}
                 ${index === 0 ? "md:pr-4 lg:pr-10 pb-12 md:pb-0" : ""}
-                border-gray-100 transition-colors duration-500 hover:bg-gray-50/30 group
+                border-gray-100
               `}
             >
               {/* STEP NUMBER */}
