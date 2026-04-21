@@ -37,9 +37,9 @@ export default function Reviews() {
           {/* COLUMN 1: LEFT BOX (25%) */}
           <div className="w-[75%] md:w-[60%] lg:w-[25%] mx-auto lg:mx-0 shrink-0 lg:pr-10">
             <div className="w-full h-full rounded-[24px] bg-[var(--color-primary)] p-8 flex flex-col items-center justify-center text-center">
-              <h3 className="type-h4 mb-6 italic">
+              <h3 className="type-h5 mb-6 italic">
                 Recognised by the people who matter most. Consistent praise from
-                the agency founder and leadership judge for yourself
+                the agency founder and leadership, judge for yourself
               </h3>
 
               <div className="flex flex-col items-center gap-3">
@@ -55,7 +55,7 @@ export default function Reviews() {
           </div>
 
           {/* COLUMN 2: REVIEWS CONTENT (75%) */}
-          <div className="flex-1 lg:pl-16 flex flex-col justify-start py-2">
+          <div className="flex-1 lg:pl-10 flex flex-col justify-start py-2">
             {/* SECTION HEADER - Aligned with Rule: mb-10 md:mb-16 */}
             <div className="flex items-center gap-4 mb-10 md:mb-16">
               <div className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center border border-gray-300">

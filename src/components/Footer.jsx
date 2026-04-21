@@ -19,7 +19,7 @@ export default function Footer() {
             <h2 className="type-h2 !text-white text-[30px] md:text-[36px] leading-[1.1] mb-8">
               Agencies trust me to deliver clean, on-time builds.{" "}
               <br className="hidden md:block" />
-              If you need it done right, let's talk.
+              If you need it done right, let&apos;s talk.
             </h2>
 
             <div className="flex flex-col gap-4">

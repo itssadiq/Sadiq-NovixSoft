@@ -40,9 +40,9 @@ export default function Hero() {
           <p
             className={`type-body-large text-[14px] md:text-[18px] text-[var(--color-dim-grey)] max-w-2xl leading-relaxed mb-5 ${revealClasses("delay-150")}`}
           >
-            I'm Sadiq, a web developer with 1+ year of agency experience and 10+
-            live projects delivered. Agencies bring me in when deadlines are
-            tight and the build has to be right the first time.
+            I&apos;m Sadiq, a web developer with 1+ year of agency experience
+            and 10+ live projects delivered. Agencies bring me in when deadlines
+            are tight and the build has to be right the first time.
           </p>
 
           <div className={revealClasses("delay-300")}>
