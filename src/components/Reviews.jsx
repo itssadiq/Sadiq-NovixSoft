@@ -9,15 +9,15 @@ export default function Reviews() {
   const reviewsData = [
     {
       id: 1,
-      text: "Working with Sadiq was a breeze. His attention to detail and creativity transformed our website. He understood our vision perfectly and delivered beyond expectations. Communication was prompt and clear throughout the project. Sadiq's UI/UX skills are top-notch, and we look forward to collaborating with him again in the future.",
-      name: "Nathan Ward",
-      role: "HELLOBAND - CO FOUNDER",
+      text: "'Great work Sadiq Ali Very proud of you' -- ' Amazing work buddy Proud of you' -- 'Nice revamp Sadiq Ali The client likes it 👍'",
+      name: "Haider Raza",
+      role: "Founder - Team Adver (Different comments across delivered projects)",
     },
     {
       id: 2,
-      text: "Sadiq is a highly reliable developer who consistently delivers clean, agency-grade code. His ability to handle complex WordPress builds while maintaining fast turnaround times has made him an invaluable partner for our client delivery.",
-      name: "Sarah Jenkins",
-      role: "DIGITAL STRATEGIST - AGENCY X",
+      text: "It's all You. Your progress and understanding is going at an amazing pace. great execution, Sadiq.",
+      name: "Muhammad Aun",
+      role: "Account Manager - Team Adver",
     },
   ];
 
@@ -28,24 +28,25 @@ export default function Reviews() {
   return (
     <section
       id="reviews"
-      className="w-full bg-[var(--color-white)] pt-16 md:pt-24 pb-16 md:pb-24"
+      // RULE: Standardized Section Padding
+      className="w-full bg-[var(--color-white)] pt-20 md:pt-32 pb-20 md:pb-32"
     >
       <div className="max-w-[1400px] mx-auto px-6">
-        {/* MAIN WRAPPER - items-stretch forces the lime box to match the content height */}
+        {/* MAIN WRAPPER */}
         <div className="flex flex-col lg:flex-row items-stretch gap-10 lg:gap-0">
-          {/* COLUMN 1: LEFT BOX (25% on Desktop, 75% on Mobile) */}
+          {/* COLUMN 1: LEFT BOX (25%) */}
           <div className="w-[75%] md:w-[60%] lg:w-[25%] mx-auto lg:mx-0 shrink-0 lg:pr-10">
-            <div className="w-full h-full rounded-[24px] bg-[var(--color-primary)] p-8 flex flex-col items-center justify-center text-center shadow-sm">
-              <h3 className="type-h3 !text-[22px] leading-tight mb-6">
-                Trusted across the board
+            <div className="w-full h-full rounded-[24px] bg-[var(--color-primary)] p-8 flex flex-col items-center justify-center text-center">
+              <h3 className="type-h5 mb-6 italic">
+                Recognised by the people who matter most. Consistent praise from
+                the agency founder and leadership, judge for yourself
               </h3>
 
               <div className="flex flex-col items-center gap-3">
                 <span className="text-[10px] uppercase tracking-[0.15em] font-bold opacity-70">
-                  Check all reviews on
+                  See live comments on
                 </span>
 
-                {/* LinkedIn Button with your requested hover logic */}
                 <div className="bg-black text-white hover:bg-white hover:text-black rounded-full transition-all duration-300">
                   <SocialLink href="#" label="LinkedIn" icon={FaLinkedinIn} />
                 </div>
@@ -53,10 +54,10 @@ export default function Reviews() {
             </div>
           </div>
 
-          {/* COLUMN 2: REVIEWS CONTENT (75% on Desktop) */}
-          <div className="flex-1 lg:pl-16 flex flex-col justify-start py-2">
-            {/* Header stays static */}
-            <div className="flex items-center gap-4 mb-8">
+          {/* COLUMN 2: REVIEWS CONTENT (75%) */}
+          <div className="flex-1 lg:pl-10 flex flex-col justify-start py-2">
+            {/* SECTION HEADER - Aligned with Rule: mb-10 md:mb-16 */}
+            <div className="flex items-center gap-4 mb-10 md:mb-16">
               <div className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center border border-gray-300">
                 <div className="w-2 h-2 rounded-full bg-black"></div>
               </div>
@@ -65,7 +66,7 @@ export default function Reviews() {
               </h5>
             </div>
 
-            {/* THE "GRID STACK" - This prevents layout jumping */}
+            {/* THE "GRID STACK" */}
             <div className="relative w-full pr-14 md:pr-20 grid grid-cols-1 grid-rows-1">
               {reviewsData.map((review, index) => (
                 <div
@@ -85,14 +86,14 @@ export default function Reviews() {
                     <span className="type-h4 !text-[18px] font-bold">
                       {review.name}
                     </span>
-                    <span className="type-caption uppercase text-[var(--color-dim-grey)] font-bold mt-1 tracking-widest">
+                    <span className="type-caption uppercase text-[var(--color-dim-grey)] font-bold mt-1 tracking-[0.15em] text-[10px]">
                       {review.role}
                     </span>
                   </div>
                 </div>
               ))}
 
-              {/* Navigation Arrow - Vertically centered on the right edge */}
+              {/* Navigation Arrow */}
               {reviewsData.length > 1 && (
                 <button
                   onClick={handleNext}
