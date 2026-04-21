@@ -87,7 +87,7 @@ export default function Hero() {
             <div className="py-6 md:pl-16 flex items-center justify-start md:min-w-[320px]">
               <ActionButton
                 text="Let's Build Together"
-                icon={<span className="text-xl leading-none">👨&zwj;💼</span>}
+                icon={<span className="text-xl leading-none">🚀</span>}
               />
             </div>
           </div>

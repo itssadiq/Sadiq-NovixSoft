@@ -5,34 +5,28 @@ import CTAButton from "./CTAButton";
 export default function Services() {
   const services = [
     {
-      title: "Website Development",
+      title: "WordPress & WooCommerce",
       description:
-        "Clean, responsive websites built for performance, scalability, and client-ready delivery.",
-      timeline: "1–2 weeks",
-    },
-    {
-      title: "Landing Pages",
-      description:
-        "Conversion-focused pages designed for campaigns, ads, and lead generation.",
-      timeline: "48–72 hrs",
-    },
-    {
-      title: "WordPress Development",
-      description:
-        "Custom WordPress builds with flexible structure and easy content management.",
+        "WordPress sites and WooCommerce stores built clean, structured for scale, and handed off ready to launch.",
       timeline: "3–7 days",
     },
     {
-      title: "Website Redesign",
+      title: "MERN Stack Development",
       description:
-        "Improving structure, UI, and performance for a more modern experience.",
-      timeline: "1–2 weeks",
+        "Custom web applications for clients who need something built beyond a template.",
+      timeline: "As per project scope",
+    },
+    {
+      title: "Landing Pages & Redesigns",
+      description:
+        "High-converting landing pages and full site redesigns WordPress or custom, faster load, sharper UI, better results.",
+      timeline: "2-7 days",
     },
     {
       title: "Ongoing Support",
       description:
-        "Reliable support for updates, fixes, and continuous improvements.",
-      timeline: "Ongoing",
+        "Whatever your client needs, whenever you need it no lock-ins, just results.",
+      timeline: "Flexible",
     },
   ];
 
