@@ -9,15 +9,15 @@ export default function Reviews() {
   const reviewsData = [
     {
       id: 1,
-      text: "Working with Sadiq was a breeze. His attention to detail and creativity transformed our website. He understood our vision perfectly and delivered beyond expectations. Communication was prompt and clear throughout the project. Sadiq's UI/UX skills are top-notch, and we look forward to collaborating with him again in the future.",
-      name: "Nathan Ward",
-      role: "HELLOBAND - CO FOUNDER",
+      text: "'Great work Sadiq Ali Very proud of you' -- ' Amazing work buddy Proud of you' -- 'Nice revamp Sadiq Ali The client likes it 👍'",
+      name: "Haider Raza",
+      role: "Founder - Team Adver (Different comments across delivered projects)",
     },
     {
       id: 2,
-      text: "Sadiq is a highly reliable developer who consistently delivers clean, agency-grade code. His ability to handle complex WordPress builds while maintaining fast turnaround times has made him an invaluable partner for our client delivery.",
-      name: "Sarah Jenkins",
-      role: "DIGITAL STRATEGIST - AGENCY X",
+      text: "It's all You. Your progress and understanding is going at an amazing pace. great execution, Sadiq.",
+      name: "Muhammad Aun",
+      role: "Account Manager - Team Adver",
     },
   ];
 
@@ -37,13 +37,14 @@ export default function Reviews() {
           {/* COLUMN 1: LEFT BOX (25%) */}
           <div className="w-[75%] md:w-[60%] lg:w-[25%] mx-auto lg:mx-0 shrink-0 lg:pr-10">
             <div className="w-full h-full rounded-[24px] bg-[var(--color-primary)] p-8 flex flex-col items-center justify-center text-center">
-              <h3 className="type-h3 !text-[22px] leading-tight mb-6">
-                Trusted across the board
+              <h3 className="type-h4 mb-6 italic">
+                Recognised by the people who matter most. Consistent praise from
+                the agency founder and leadership judge for yourself
               </h3>
 
               <div className="flex flex-col items-center gap-3">
                 <span className="text-[10px] uppercase tracking-[0.15em] font-bold opacity-70">
-                  Check all reviews on
+                  See live comments on
                 </span>
 
                 <div className="bg-black text-white hover:bg-white hover:text-black rounded-full transition-all duration-300">
