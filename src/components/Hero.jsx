@@ -10,11 +10,11 @@ export default function Hero() {
   }, []);
 
   const marqueeItems = [
-    "Website Development",
-    "Website Redesign",
-    "Landing Pages",
-    "Custom Builds",
     "WordPress Builds",
+    "WooCommerce Stores",
+    "MERN Applications",
+    "Landing Pages",
+    "Website Redesigns",
     "Ongoing Support",
   ];
 
@@ -28,27 +28,26 @@ export default function Hero() {
   return (
     <div className="w-full max-h-[100dvh] flex flex-col gap-4 md:gap-10 bg-[var(--color-white)] overflow-hidden">
       {/* MAIN HERO CONTENT */}
-      <main className="flex-1 w-full max-w-[1400px] mx-auto px-6 flex flex-col justify-start pt-4 md:pt-10">
+      <main className="flex-1 w-full max-w-[1400px] mx-auto px-6 flex flex-col justify-start pt-4 md:pt-8">
         <div className="max-w-[900px]">
           <h1
-            className={`type-h1 text-[28px] md:text-[40px] tracking-[-0.02em] leading-[1.1] mb-3 md:mb-5 ${revealClasses("delay-0")}`}
+            className={`type-h1 text-[28px] md:text-[40px] tracking-[-0.02em] leading-[1.1] mb-3 ${revealClasses("delay-0")}`}
           >
-            Web Development Partner for Agencies
-            <br className="hidden md:block" /> that Needs Fast, Reliable Client
-            Delivery
+            The Last Developer Your Agency Will
+            <br className="hidden md:block" /> Ever Need to Search For
           </h1>
 
           <p
-            className={`type-body-large text-[14px] md:text-[18px] text-[var(--color-dim-grey)] max-w-2xl leading-relaxed mb-6 md:mb-8 ${revealClasses("delay-150")}`}
+            className={`type-body-large text-[14px] md:text-[18px] text-[var(--color-dim-grey)] max-w-2xl leading-relaxed mb-5 ${revealClasses("delay-150")}`}
           >
-            Freelance developer helping agencies avoid delays, messy builds, and
-            constant back-and-forth delivering clean, scalable websites
-            (WordPress & custom) with fast turnaround and smooth handoffs.
+            I'm Sadiq, a web developer with 1+ year of agency experience and 10+
+            live projects delivered. Agencies bring me in when deadlines are
+            tight and the build has to be right the first time.
           </p>
 
           <div className={revealClasses("delay-300")}>
             <ActionButton
-              text="View My Work"
+              text="See My Work"
               hoverMode="primary"
               icon={<span className="text-xl leading-none">🔖</span>}
             />
@@ -63,6 +62,11 @@ export default function Hero() {
           <div className="max-w-[1400px] mx-auto w-full px-6 flex flex-col md:flex-row">
             {/* Review Content */}
             <div className="flex-1 py-5 md:pr-12 md:border-r border-[var(--color-black)] flex flex-col justify-center">
+              {/* ADDED LINE HERE */}
+              <span className="type-caption uppercase tracking-wider mb-2 block text-[var(--color-dim-grey)]">
+                Don&apos;t just take my word for it
+              </span>
+
               <blockquote className="max-w-[700px]">
                 <p className="type-h5 italic">
                   “It&apos;s all You. Your progress and understanding is going
@@ -82,8 +86,8 @@ export default function Hero() {
             {/* Action Button Area */}
             <div className="py-6 md:pl-16 flex items-center justify-start md:min-w-[320px]">
               <ActionButton
-                text="Let's Work Together"
-                icon={<span className="text-xl leading-none">👨‍💼</span>}
+                text="Let's Build Together"
+                icon={<span className="text-xl leading-none">👨&zwj;💼</span>}
               />
             </div>
           </div>
