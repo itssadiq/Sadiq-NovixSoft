@@ -4,21 +4,21 @@ export default function Process() {
   const steps = [
     {
       number: "01",
-      title: "Discovery & Development",
+      title: "Brief & Build",
       description:
-        "Understand project requirements, scope, and goals. Build clean, scalable website ready for client review.",
+        "Share the requirements, scope, and goals. I get to work immediately, building clean & structured site from day one",
     },
     {
       number: "02",
-      title: "Testing & Deployment",
+      title: "Review & Refine",
       description:
-        "Deploy tested website efficiently for performance, and smooth user experience.",
+        "You review, I refine. Fast revision turnaround, clear communication, no back & forth headaches.",
     },
     {
       number: "03",
-      title: "Revisions & Delivery",
+      title: "Test & Deliver",
       description:
-        "Handle revisions seamlessly to meet client expectations, then deliver a fully structured, client-ready project.",
+        "Fully tested, performance optimized & client-ready. Clean files, zero loose ends.",
     },
   ];
 
