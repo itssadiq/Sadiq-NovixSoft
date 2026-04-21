@@ -10,11 +10,17 @@ export default function Navbar() {
 
   const navItems = ["About Me", "Works", "Articles", "Reviews"];
 
+  // Helper to determine link destination
+  const getHref = (item) => {
+    if (item === "Reviews") return "/#reviews";
+    return `/${item.toLowerCase().replace(" ", "-")}`;
+  };
+
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-100">
       <div className="max-w-[1400px] mx-auto px-6 h-20 flex items-center justify-between">
         {/* LEFT: Identity */}
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 cursor-pointer">
           <div className="w-12 h-12 rounded-full bg-gray-100 overflow-hidden border border-gray-200">
             <Image
               src={Profile}
@@ -28,18 +34,17 @@ export default function Navbar() {
               Web Developer
             </span>
           </div>
-        </div>
+        </Link>
 
         {/* CENTER: Links (Desktop only, >1024px) */}
         <div className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
             <Link
               key={item}
-              href={`#${item.toLowerCase().replace(" ", "-")}`}
+              href={getHref(item)}
               className="type-nav-link !not-italic group relative py-1"
             >
               {item}
-              {/* Minimal Animated Underline */}
               <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[var(--color-black)] origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
             </Link>
           ))}
@@ -89,13 +94,12 @@ export default function Navbar() {
         {navItems.map((item) => (
           <Link
             key={item}
-            href={`#${item.toLowerCase().replace(" ", "-")}`}
+            href={getHref(item)}
             onClick={() => setIsOpen(false)}
             className="type-nav-link !not-italic py-3 border-b border-gray-50 flex w-full"
           >
             <span className="relative group block w-fit pb-0.5">
               {item}
-              {/* Minimal Animated Underline for Mobile */}
               <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[var(--color-black)] origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
             </span>
           </Link>
