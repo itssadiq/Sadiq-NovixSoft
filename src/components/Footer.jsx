@@ -3,10 +3,8 @@ import Link from "next/link";
 
 export default function Footer() {
   const socialLinks = [
-    { name: "Behance", href: "#" },
-    { name: "Twitter", href: "#" },
-    { name: "Instagram", href: "#" },
-    { name: "Dribbble", href: "#" },
+    { name: "Linkedin", href: "https://www.linkedin.com/in/dev-sadiq-ali/" },
+    { name: "Instagram", href: "https://www.instagram.com/devsadiqali/" },
   ];
 
   return (
@@ -16,12 +14,12 @@ export default function Footer() {
           {/* LEFT SECTION */}
           <div className="max-w-[600px]">
             <span className="type-body-small !text-[var(--color-dim-grey)] mb-3 block uppercase tracking-wider">
-              Are you Interested in working with me ?
+              Your Next Reliable Developer is One Message Away
             </span>
             <h2 className="type-h2 !text-white text-[30px] md:text-[36px] leading-[1.1] mb-8">
-              Creativity A New Shape & Form With{" "}
+              Agencies trust me to deliver clean, on-time builds.{" "}
               <br className="hidden md:block" />
-              Sadiq Portfolio Template
+              If you need it done right, let's talk.
             </h2>
 
             <div className="flex flex-col gap-4">
@@ -31,10 +29,10 @@ export default function Footer() {
                   Send a message
                 </span>
                 <a
-                  href="mailto:alexander@example.io"
+                  href="mailto:devsadiqali@gmail.com"
                   className="type-body-large !text-white font-bold transition-colors duration-300 hover:!text-[var(--color-primary)] w-fit"
                 >
-                  alexander@example.io
+                  devsadiqali@gmail.com
                 </a>
               </div>
 
@@ -44,12 +42,12 @@ export default function Footer() {
                   Let&apos;s Chat
                 </span>
                 <a
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/+923002454781"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="type-body-large !text-white font-bold transition-colors duration-300 hover:!text-[var(--color-primary)] flex items-center gap-2 w-fit"
                 >
-                  +123 456 7890
+                  +92 300 2454781
                   <span className="text-[9px] border border-white/20 px-2 py-0.5 rounded-full font-medium uppercase tracking-tighter">
                     WhatsApp
                   </span>
@@ -62,10 +60,10 @@ export default function Footer() {
           <div className="flex flex-col gap-8 lg:text-right lg:items-end">
             <div className="flex flex-col gap-1">
               <span className="type-caption !text-[var(--color-dim-grey)] block lg:mt-1">
-                41°24&apos;12.2&quot;N / 2°10&apos;26.5&quot;E
+                24.8608° N / 67.0104° E
               </span>
               <span className="type-body !text-white font-medium">
-                Remote from Dubai UAE
+                Remote from Karachi, Pakistan
               </span>
             </div>
 
@@ -101,29 +99,23 @@ export default function Footer() {
         {/* BOTTOM BAR */}
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-0">
           <p className="type-body-small !text-white/50">
-            Copyright © 2025 Sadiq. All Rights Reserved.
+            Copyright © 2026 Sadiq. All Rights Reserved.
           </p>
 
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 type-body-small-500 uppercase tracking-widest text-[10px]">
-            <span className="text-[var(--color-dim-grey)] lowercase">
-              work by <span className="text-white capitalize">Onmix.</span>
-            </span>
-            <span className="text-[var(--color-dim-grey)] lowercase">
-              powered by <span className="text-white capitalize">Framer.</span>
-            </span>
             <span className="w-1 h-1 rounded-full bg-white/10"></span>
             <Link
               href="#"
               className="text-white hover:!text-[var(--color-primary)] transition-colors"
             >
-              404
+              Works
             </Link>
             <span className="w-1 h-1 rounded-full bg-white/10"></span>
             <Link
               href="#"
               className="text-white hover:!text-[var(--color-primary)] transition-colors"
             >
-              Licensing
+              Contacts
             </Link>
           </div>
         </div>
