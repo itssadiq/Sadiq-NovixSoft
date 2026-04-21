@@ -4,13 +4,10 @@ import Profile from "../../public/profile.png";
 
 export default function AboutMe() {
   const expertise = [
-    "Wireframing",
-    "UI Design",
-    "UX Design",
-    "Visual Design",
-    "Prototypes",
-    "Branding",
-    "Mobile App",
+    "10+ Projects Delivered",
+    "1+ Year Agency Expertise",
+    "100% On-Time Delivery",
+    "<08 hrs Response Time",
   ];
 
   return (
@@ -45,25 +42,26 @@ export default function AboutMe() {
 
           {/* COLUMN 2: BIO & LOCATION (55%) */}
           <div className="w-full lg:w-[55%] flex flex-col justify-between lg:px-12 pt-2">
-            <div className="flex flex-col gap-6">
-              <p className="type-body-large !text-[var(--color-black)] leading-relaxed">
-                I&apos;m currently working as UI UX Designer at Framer, where my
-                team and I are on a mission to create the most intelligent and
-                user-friendly learning platform in the world.
+            <div className="flex flex-col gap-4">
+              <p className="type-body">
+                I&apos;m a web developer partnering with digital agencies as a
+                dedicated build resource. 1+ year of agency experience, 10+ live
+                projects delivered clean, on time, and handed off without
+                friction.
               </p>
-              <p className="type-body text-[var(--color-dim-grey)] leading-relaxed">
-                I&apos;m not looking for anything new, but if you want to reach
-                out for a chat I&apos;m happy to hear from you!
+              <p className="type-body">
+                I treat every project like it has my name on it. Clear
+                communication, no micromanagement needed, and work that holds up
+                long after handoff. I&apos;m not here to close tickets, I&apos;m
+                here to make your agency deliver.
               </p>
             </div>
 
-            <div className="mt-12">
-              <span className="type-caption uppercase tracking-[0.15em] font-semibold text-[var(--color-dim-grey)] text-[10px] block mb-2">
+            <div className="mt-6">
+              <span className="type-body-small block !text-[var(--color-black)]">
                 Based in
               </span>
-              <span className="type-body font-medium text-[var(--color-black)]">
-                California, USA
-              </span>
+              <span className="type-body !font-medium">Karachi, Pakistan</span>
             </div>
           </div>
 
@@ -72,14 +70,14 @@ export default function AboutMe() {
 
           {/* COLUMN 3: EXPERTISE (25%) */}
           <div className="w-full lg:w-[25%] shrink-0 lg:pl-12 pt-2 flex flex-col">
-            <h4 className="type-h4 mb-8">My Expertise</h4>
+            <h4 className="type-h4 mb-8">By the Numbers</h4>
             <div className="flex flex-wrap gap-2">
               {expertise.map((skill, index) => (
                 <div
                   key={index}
                   className="px-4 py-2 border border-[var(--color-black)] rounded-full flex items-center justify-center"
                 >
-                  <span className="type-body-small !text-[var(--color-black)] font-medium">
+                  <span className="type-body-small !text-[var(--color-black)]">
                     {skill}
                   </span>
                 </div>
