@@ -1,10 +1,14 @@
 import React from "react";
+import Link from "next/link";
 
-export default function ActionButton({ text, icon }) {
-  return (
-    <button className="group flex items-center focus:outline-none cursor-pointer">
+export default function ActionButton({ text, icon, href }) {
+  const containerClasses =
+    "group flex items-center focus:outline-none cursor-pointer";
+
+  // The visual content is pulled into a variable to keep the code clean
+  const buttonContent = (
+    <>
       {/* --- TEXT PILL --- */}
-      {/* Sits underneath the icon, bg goes black on hover */}
       <div className="relative z-0 flex items-center justify-center h-[40px] px-5 border border-[var(--color-black)] rounded-full bg-[var(--color-white)] transition-colors duration-300 group-hover:bg-[var(--color-black)]">
         <span className="type-btn text-[var(--color-black)] transition-colors duration-300 group-hover:text-[var(--color-white)]">
           {text}
@@ -12,10 +16,20 @@ export default function ActionButton({ text, icon }) {
       </div>
 
       {/* --- ICON CIRCLE (OUTSIDE) --- */}
-      {/* -ml-4 pulls the circle left to overlap the text pill's right padding perfectly */}
       <div className="relative z-10 -ml-4 flex items-center justify-center shrink-0 w-[40px] h-[40px] overflow-hidden border border-[var(--color-black)] rounded-full bg-[var(--color-black)] text-[var(--color-white)] transition-colors duration-300 group-hover:bg-[var(--color-primary)] group-hover:text-[var(--color-black)]">
         {icon}
       </div>
-    </button>
+    </>
   );
+
+  // If an href is provided, render a Link; otherwise, render a button
+  if (href) {
+    return (
+      <Link href={href} className={containerClasses}>
+        {buttonContent}
+      </Link>
+    );
+  }
+
+  return <button className={containerClasses}>{buttonContent}</button>;
 }
