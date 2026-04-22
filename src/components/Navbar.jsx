@@ -56,6 +56,7 @@ export default function Navbar() {
             <ActionButton
               text="Let's Talk"
               icon={<span className="text-xl leading-none">👋</span>}
+              href="/contact"
             />
           </div>
 
