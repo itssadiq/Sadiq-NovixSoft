@@ -11,7 +11,7 @@ export default function Works() {
   return (
     <section
       id="works"
-      className="w-full bg-[var(--color-primary)] pt-20 md:pt-32"
+      className="w-full bg-[var(--color-white)] pt-20 md:pt-32"
     >
       <div className="max-w-[1400px] mx-auto px-6">
         {/* SECTION HEADER (Applied Rule: mb-10 md:mb-16) */}
