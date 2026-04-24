@@ -4,8 +4,8 @@ export default function ProjectGallery({ project }) {
   return (
     <section className="w-full bg-[var(--color-white)] pt-10">
       <div className="max-w-[1400px] mx-auto px-6">
-        <div className="flex flex-col md:flex-row gap-6 lg:gap-8">
-          <div className="w-full md:w-[65%] aspect-video md:aspect-auto md:h-[600px] overflow-hidden bg-gray-100">
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="w-full md:w-[70%] aspect-video md:aspect-auto md:h-[600px] overflow-hidden bg-gray-100">
             <img
               src={project.images.main}
               alt={project.title}

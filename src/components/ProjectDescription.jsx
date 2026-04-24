@@ -14,7 +14,7 @@ export default function ProjectDescription({ project }) {
           {/* TOP ROW: CAPTION & BUTTON */}
           <div className="flex items-center justify-between mb-10">
             <span className="type-caption !text-[var(--color-black)] uppercase tracking-tight font-bold">
-              Go to live this project!
+              See this project live!
             </span>
             <ActionButton
               text="Visit Website"
@@ -24,9 +24,9 @@ export default function ProjectDescription({ project }) {
           </div>
 
           {/* TITLE & MAIN DESCRIPTION */}
-          <div className="flex flex-col gap-6 mb-16">
+          <div className="flex flex-col gap-6 mb-10">
             <h2 className="type-h2">{project.fullTitle || project.title}</h2>
-            <p className="type-body leading-relaxed !text-[var(--color-dim-grey)]">
+            <p className="type-body !text-[var(--color-dim-grey)]">
               {project.longDescription || project.description}
             </p>
           </div>
@@ -34,14 +34,12 @@ export default function ProjectDescription({ project }) {
           {/* KEY FEATURES SECTION */}
           <div className="flex flex-col gap-8">
             <h4 className="type-h3">Key Features:</h4>
-            <ul className="flex flex-col gap-4">
+            <ul className="flex flex-col gap-0">
               {features.map((feature, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[var(--color-dim-grey)] shrink-0"></span>
-                  <p className="type-body-large !text-[var(--color-dim-grey)]">
-                    <strong className="text-[var(--color-black)] font-bold">
-                      {feature.label}:
-                    </strong>{" "}
+                <li key={index} className="flex items-start gap-4">
+                  <span className="mt-2.5 w-1 h-1 rounded-full bg-[var(--color-dim-grey)] shrink-0"></span>
+                  <p className="type-body !text-[var(--color-dim-grey)]">
+                    <strong className="font-bold">{feature.label}:</strong>{" "}
                     {feature.text}
                   </p>
                 </li>
