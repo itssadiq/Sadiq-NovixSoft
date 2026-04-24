@@ -105,14 +105,14 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 type-body-small-500 uppercase tracking-widest text-[10px]">
             <span className="w-1 h-1 rounded-full bg-white/10"></span>
             <Link
-              href="#"
+              href="/works"
               className="text-white hover:!text-[var(--color-primary)] transition-colors"
             >
               Works
             </Link>
             <span className="w-1 h-1 rounded-full bg-white/10"></span>
             <Link
-              href="#"
+              href="/contact"
               className="text-white hover:!text-[var(--color-primary)] transition-colors"
             >
               Contacts

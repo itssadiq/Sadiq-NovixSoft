@@ -13,12 +13,12 @@ const WorkPage = () => {
     {
       name: "LinkedIn",
       icon: FaLinkedinIn,
-      href: "https://linkedin.com/in/yourprofile",
+      href: "https://www.linkedin.com/in/dev-sadiq-ali/",
     },
     {
       name: "Instagram",
       icon: FaInstagram,
-      href: "https://instagram.com/yourprofile",
+      href: "https://www.instagram.com/devsadiqali/",
     },
   ];
 

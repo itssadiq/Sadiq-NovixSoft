@@ -35,15 +35,23 @@ export default function Works() {
       {/* RIBBON BAR (Applied Rules: py-4 and mt-20 md:mt-32) */}
       <div className="w-full bg-[var(--color-black)] py-4 mt-20 md:mt-32">
         <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-0">
-          <CTAButton text="View All Projects" href="#contact" />
+          <CTAButton text="View All Projects" href="/works" />
 
           <div className="flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
             <span className="text-white/60 text-[13px] font-medium lowercase tracking-wide">
               check my creativity
             </span>
             <div className="flex items-center gap-3">
-              <SocialLink href="#" label="LinkedIn" icon={FaLinkedinIn} />
-              <SocialLink href="#" label="Instagram" icon={FaInstagram} />
+              <SocialLink
+                href="https://www.linkedin.com/in/dev-sadiq-ali/"
+                label="LinkedIn"
+                icon={FaLinkedinIn}
+              />
+              <SocialLink
+                href="https://www.instagram.com/devsadiqali/"
+                label="Instagram"
+                icon={FaInstagram}
+              />
             </div>
           </div>
         </div>

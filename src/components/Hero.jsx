@@ -50,6 +50,7 @@ export default function Hero() {
               text="See My Work"
               hoverMode="primary"
               icon={<span className="text-xl leading-none">🔖</span>}
+              href="#works"
             />
           </div>
         </div>
@@ -88,6 +89,7 @@ export default function Hero() {
               <ActionButton
                 text="Let's Build Together"
                 icon={<span className="text-xl leading-none">🚀</span>}
+                href="/contact"
               />
             </div>
           </div>

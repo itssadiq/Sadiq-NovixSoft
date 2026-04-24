@@ -7,8 +7,16 @@ import ContactImage from "../../public/contact-img.jpg"; // Replace with your ac
 
 export default function ContactForm() {
   const socials = [
-    { name: "Linkedin", icon: FaLinkedinIn, href: "#" },
-    { name: "Instagram", icon: FaInstagram, href: "#" },
+    {
+      name: "Linkedin",
+      icon: FaLinkedinIn,
+      href: "https://www.linkedin.com/in/dev-sadiq-ali/",
+    },
+    {
+      name: "Instagram",
+      icon: FaInstagram,
+      href: "https://www.instagram.com/devsadiqali/",
+    },
   ];
 
   return (
