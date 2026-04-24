@@ -42,22 +42,17 @@ export default function ProjectShowcase({ project }) {
           </div>
         </div>
 
-        {/* RIGHT CONTENT: IMAGES (70% Width) */}
-        <div className="w-full lg:w-[70%] flex gap-4 lg:gap-6">
-          {/* Main Image (100% on mobile, 60% on desktop) */}
-          <div className="w-full lg:w-[60%] h-[250px] md:h-[450px] lg:h-auto relative overflow-hidden bg-gray-50">
+        {/* RIGHT CONTENT: SINGLE IMAGE (70% Width) */}
+        <div className="w-full lg:w-[70%]">
+          {/* 
+              Image Container: 
+              - aspect-video ensures the 16:9 ratio (1600x900) is maintained.
+              - overflow-hidden and rounded- [10px] for styling consistency.
+          */}
+          <div className="w-full aspect-video relative overflow-hidden bg-gray-50">
             <img
               src={project.images.main}
               alt={project.title}
-              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-            />
-          </div>
-
-          {/* Secondary Image (Hidden on mobile, 40% on desktop) */}
-          <div className="hidden lg:block lg:w-[40%] h-[250px] md:h-[450px] lg:h-auto relative overflow-hidden bg-gray-50">
-            <img
-              src={project.images.secondary}
-              alt={`${project.title} detail`}
               className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
           </div>

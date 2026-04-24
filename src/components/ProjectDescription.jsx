@@ -20,11 +20,12 @@ export default function ProjectDescription({ project }) {
               text="Visit Website"
               icon={<span className="text-xl leading-none">🔗</span>}
               href={project.liveUrl || "#"}
+              target="_blank"
             />
           </div>
 
           {/* TITLE & MAIN DESCRIPTION */}
-          <div className="flex flex-col gap-6 mb-10">
+          <div className="flex flex-col gap-6 mb-8">
             <h2 className="type-h2">{project.fullTitle || project.title}</h2>
             <p className="type-body !text-[var(--color-dim-grey)]">
               {project.longDescription || project.description}
@@ -33,7 +34,6 @@ export default function ProjectDescription({ project }) {
 
           {/* KEY FEATURES SECTION */}
           <div className="flex flex-col gap-8">
-            <h4 className="type-h3">Key Features:</h4>
             <ul className="flex flex-col gap-0">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start gap-4">
