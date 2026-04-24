@@ -44,8 +44,8 @@ export default function ProjectShowcase({ project }) {
 
         {/* RIGHT CONTENT: IMAGES (70% Width) */}
         <div className="w-full lg:w-[70%] flex gap-4 lg:gap-6">
-          {/* Main Image (Equal 50% on mobile/tablet, 60% on desktop) */}
-          <div className="w-1/2 lg:w-[60%] h-[250px] md:h-[450px] lg:h-auto relative overflow-hidden bg-gray-50">
+          {/* Main Image (100% on mobile, 60% on desktop) */}
+          <div className="w-full lg:w-[60%] h-[250px] md:h-[450px] lg:h-auto relative overflow-hidden bg-gray-50">
             <img
               src={project.images.main}
               alt={project.title}
@@ -53,8 +53,8 @@ export default function ProjectShowcase({ project }) {
             />
           </div>
 
-          {/* Secondary Image (Equal 50% on mobile/tablet, 40% on desktop) */}
-          <div className="w-1/2 lg:w-[40%] h-[250px] md:h-[450px] lg:h-auto relative overflow-hidden bg-gray-50">
+          {/* Secondary Image (Hidden on mobile, 40% on desktop) */}
+          <div className="hidden lg:block lg:w-[40%] h-[250px] md:h-[450px] lg:h-auto relative overflow-hidden bg-gray-50">
             <img
               src={project.images.secondary}
               alt={`${project.title} detail`}
