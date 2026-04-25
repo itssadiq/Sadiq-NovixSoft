@@ -36,8 +36,8 @@ export default function Reviews() {
         <div className="flex flex-col lg:flex-row items-stretch gap-10 lg:gap-0">
           {/* COLUMN 1: LEFT BOX (25%) */}
           <div className="w-[75%] md:w-[60%] lg:w-[25%] mx-auto lg:mx-0 shrink-0 lg:pr-10">
-            <div className="w-full h-full rounded-[24px] bg-[var(--color-primary)] p-8 flex flex-col items-center justify-center text-center">
-              <h3 className="type-h5 mb-6 italic">
+            <div className="w-full h-full rounded-[10px] bg-[var(--color-black)] p-8 flex flex-col items-center justify-center text-center">
+              <h3 className="type-h5 !text-white mb-6 italic">
                 Recognised by the people who matter most. Consistent praise from
                 the agency founder and leadership, judge for yourself
               </h3>

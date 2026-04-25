@@ -157,7 +157,6 @@ export default function ContactForm() {
                     text={
                       status === "Sending..." ? "Sending..." : "Send Message"
                     }
-                    icon={<span className="text-xl">💌</span>}
                   />
                   {status === "ERROR" && (
                     <span className="type-body-small text-red-500">

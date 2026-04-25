@@ -11,8 +11,9 @@ export default function Navbar() {
   // Updated navigation items
   const navItems = ["About Me", "Works", "Services", "Reviews"];
 
-  // Updated helper to determine link destination as anchors on homepage
+  // Updated helper to navigate to dedicated /works page and use anchors for others
   const getHref = (item) => {
+    if (item === "Works") return "/works";
     return `/#${item.toLowerCase().replace(" ", "-")}`;
   };
 
@@ -53,11 +54,7 @@ export default function Navbar() {
         {/* RIGHT: Desktop Button & Mobile/Tablet Hamburger */}
         <div className="flex items-center gap-4">
           <div className="hidden lg:block">
-            <ActionButton
-              text="Let's Talk"
-              icon={<span className="text-xl leading-none">👋</span>}
-              href="/contact"
-            />
+            <ActionButton text="Let's Talk" href="/contact" />
           </div>
 
           <button
@@ -107,11 +104,7 @@ export default function Navbar() {
         ))}
 
         <div className="mt-4 flex self-start">
-          <ActionButton
-            text="Let's Talk"
-            icon={<span className="text-xl leading-none">👋</span>}
-            href="/contact"
-          />
+          <ActionButton text="Let's Talk" href="/contact" />
         </div>
       </div>
     </nav>

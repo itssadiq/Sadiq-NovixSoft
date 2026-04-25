@@ -26,24 +26,6 @@ export default function PageHero({
             </div>
             <h1 className="type-h1 tracking-tight">{title}</h1>
           </div>
-
-          {/* RIGHT: DECORATIVE TRIANGLES (Your requested styles preserved) */}
-          <div className="hidden lg:flex items-end">
-            <div className="flex items-end gap-2">
-              <div
-                className="w-30 h-30 bg-gray-100"
-                style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
-              ></div>
-              <div
-                className="w-30 h-30 bg-[var(--color-primary)]"
-                style={{ clipPath: "polygon(100% 0, 0 100%, 100% 100%)" }}
-              ></div>
-              <div
-                className="w-30 h-30 bg-[var(--color-dim-grey)]"
-                style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
-              ></div>
-            </div>
-          </div>
         </div>
       </div>
 

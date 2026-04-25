@@ -10,7 +10,7 @@ const ContactPage = () => {
     email: "devsadiqali@gmail.com",
     phone: "+92 300 2454781",
     coords: "24.8608° N / 67.0104° E",
-    location: "Remote from Karachi, Pakistan",
+    location: "Karachi, Pakistan",
   };
 
   return (
