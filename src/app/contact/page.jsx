@@ -1,9 +1,20 @@
-"use client";
 import React from "react";
 import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+
+// --- SEO OPTIMIZATION ---
+export const metadata = {
+  title: "Contact | Sadiq Ali | Web Developer",
+  description:
+    "Let's build something great together. Reach out for agency-standard web development, WordPress builds, or MERN applications.",
+  openGraph: {
+    title: "Contact Sadiq Ali",
+    description: "Greet me with a 'Hi!' and share your project idea.",
+    images: ["/profile.png"],
+  },
+};
 
 const ContactPage = () => {
   const contactInfo = {

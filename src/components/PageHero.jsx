@@ -44,7 +44,7 @@ export default function PageHero({
                   </span>
                   <a
                     href={`mailto:${contactData?.email}`}
-                    className="type-body font-bold !text-white hover:!text-[var(--color-primary)] transition-colors duration-300"
+                    className="type-body font-bold !text-white transition-transform duration-300 hover:scale-105"
                   >
                     {contactData?.email}
                   </a>
@@ -57,7 +57,7 @@ export default function PageHero({
                   <a
                     href={`https://wa.me/+923002454781`}
                     target="_blank"
-                    className="type-body font-bold !text-white hover:!text-[var(--color-primary)] transition-colors duration-300"
+                    className="type-body font-bold !text-white transition-transform duration-300 hover:scale-105"
                   >
                     {contactData?.phone}
                   </a>

@@ -77,7 +77,7 @@ export default function ContactForm() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           {/* LEFT: IMAGE */}
           <div className="w-full lg:w-[45%] shrink-0">
-            <div className="relative aspect-[4/5] lg:aspect-square w-full overflow-hidden bg-gray-100 rounded-[10px]">
+            <div className="relative aspect-[4/5] lg:aspect-square w-full overflow-hidden bg-gray-100">
               <Image
                 src={ContactImage}
                 alt="Let's work together"
