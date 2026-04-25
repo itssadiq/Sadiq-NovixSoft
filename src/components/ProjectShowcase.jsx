@@ -44,17 +44,24 @@ export default function ProjectShowcase({ project }) {
 
         {/* RIGHT CONTENT: SINGLE IMAGE (70% Width) */}
         <div className="w-full lg:w-[70%]">
-          {/* 
-              Image Container: 
-              - aspect-video ensures the 16:9 ratio (1600x900) is maintained.
-              - overflow-hidden and rounded- [10px] for styling consistency.
-          */}
-          <div className="w-full aspect-video relative overflow-hidden bg-gray-50">
-            <img
-              src={project.images.main}
-              alt={project.title}
-              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-            />
+          <div className="w-full relative overflow-hidden bg-gray-50">
+            {/* MOBILE IMAGE: 1:1 Square Ratio (aspect-square) */}
+            <div className="block md:hidden w-full aspect-square">
+              <img
+                src={project.images.mobile || project.images.main}
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+            </div>
+
+            {/* DESKTOP/TABLET IMAGE: 16:9 Video Ratio (aspect-video) */}
+            <div className="hidden md:block w-full aspect-video">
+              <img
+                src={project.images.main}
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+            </div>
           </div>
         </div>
       </div>
