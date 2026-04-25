@@ -33,7 +33,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="w-full bg-[var(--color-primary)] pt-20 md:pt-32 pb-0"
+      className="w-full bg-[var(--color-white)] pt-20 md:pt-32 pb-0"
     >
       <div className="max-w-[1400px] mx-auto px-6">
         {/* SECTION HEADER - Standardized Spacing */}

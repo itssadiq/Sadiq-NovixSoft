@@ -33,8 +33,8 @@ export default function Hero() {
           <h1
             className={`type-h1 text-[28px] md:text-[40px] tracking-[-0.02em] leading-[1.1] mb-3 ${revealClasses("delay-0")}`}
           >
-            Reliable Web Development Partner for
-            <br className="hidden md:block" /> Agency Projects
+            Web Development Partner for
+            <br className="hidden md:block" /> Digital Agencies
           </h1>
 
           <p
@@ -50,7 +50,6 @@ export default function Hero() {
             <ActionButton
               text="See My Work"
               hoverMode="primary"
-              icon={<span className="text-xl leading-none">🔖</span>}
               href="#works"
             />
           </div>
@@ -87,11 +86,7 @@ export default function Hero() {
 
             {/* Action Button Area */}
             <div className="py-6 md:pl-16 flex items-center justify-start md:min-w-[320px]">
-              <ActionButton
-                text="Let's Build Together"
-                icon={<span className="text-xl leading-none">🚀</span>}
-                href="/contact"
-              />
+              <ActionButton text="Let's Build Together" href="/contact" />
             </div>
           </div>
         </section>
@@ -113,7 +108,7 @@ export default function Hero() {
                     <span className="text-[14px] md:text-base text-[var(--color-white)] font-medium whitespace-nowrap">
                       {item}
                     </span>
-                    <span className="flex items-center justify-center mx-5 text-[var(--color-primary)] text-sm leading-none">
+                    <span className="flex items-center justify-center mx-5 text-[var(--color-white)] text-sm leading-none">
                       ✦
                     </span>
                   </div>

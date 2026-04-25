@@ -30,7 +30,7 @@ export default function Footer() {
                 </span>
                 <a
                   href="mailto:devsadiqali@gmail.com"
-                  className="type-body-large !text-white font-bold transition-colors duration-300 hover:!text-[var(--color-primary)] w-fit"
+                  className="type-body-large !text-white font-bold transition-transform duration-300 hover:scale-105 w-fit"
                 >
                   devsadiqali@gmail.com
                 </a>
@@ -45,7 +45,7 @@ export default function Footer() {
                   href="https://wa.me/+923002454781"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="type-body-large !text-white font-bold transition-colors duration-300 hover:!text-[var(--color-primary)] flex items-center gap-2 w-fit"
+                  className="type-body-large !text-white font-bold transition-transform duration-300 hover:scale-105 flex items-center gap-2 w-fit"
                 >
                   +92 300 2454781
                   <span className="text-[9px] border border-white/20 px-2 py-0.5 rounded-full font-medium uppercase tracking-tighter">
@@ -63,7 +63,7 @@ export default function Footer() {
                 24.8608° N / 67.0104° E
               </span>
               <span className="type-body !text-white font-medium">
-                Remote from Karachi, Pakistan
+                Karachi, Pakistan
               </span>
             </div>
 
@@ -75,7 +75,7 @@ export default function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center lg:justify-end gap-2 type-body !text-white font-medium transition-colors duration-300 hover:!text-[var(--color-primary)]"
+                  className="group flex items-center lg:justify-end gap-2 type-body !text-white font-medium transition-transform duration-300 hover:scale-105"
                 >
                   {link.name}
                   <span className="text-xl leading-none">🔗</span>
@@ -95,14 +95,14 @@ export default function Footer() {
             <span className="w-1 h-1 rounded-full bg-white/10"></span>
             <Link
               href="/works"
-              className="text-white hover:!text-[var(--color-primary)] transition-colors"
+              className="text-white transition-transform duration-300 hover:scale-105"
             >
               Works
             </Link>
             <span className="w-1 h-1 rounded-full bg-white/10"></span>
             <Link
               href="/contact"
-              className="text-white hover:!text-[var(--color-primary)] transition-colors"
+              className="text-white transition-transform duration-300 hover:scale-105"
             >
               Contacts
             </Link>
