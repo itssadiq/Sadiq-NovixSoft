@@ -165,7 +165,7 @@ export const projectsData = [
   },
   {
     id: "social-sheikhs",
-    title: "Website Development for Event Management & Digital Agency",
+    title: "Web Development for Event Management & Digital Agency",
     fullTitle:
       "WordPress Elementor Website Development for Event Management & Digital Agency",
     description:

@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
@@ -7,6 +6,19 @@ import ProjectShowcase from "@/components/ProjectShowcase";
 import CTAButton from "@/components/CTAButton";
 import { projectsData } from "../../data/projects";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa6";
+
+// --- SEO OPTIMIZATION ---
+export const metadata = {
+  title: "Works | Selected Projects",
+  description:
+    "Explore a gallery of high-end web projects delivered for digital agencies. From custom WordPress builds to modern web applications.",
+  openGraph: {
+    title: "Portfolio Works | Sadiq Ali",
+    description:
+      "Hand-picked projects showcasing clean code and agency-standard delivery.",
+    images: ["/profile.png"],
+  },
+};
 
 const WorkPage = () => {
   const workPlatforms = [
@@ -42,7 +54,7 @@ const WorkPage = () => {
         </div>
       </section>
 
-      {/* BOTTOM RIBBON - Added mb-20 md:mb-32 to prevent merging with Footer */}
+      {/* BOTTOM RIBBON */}
       <div className="w-full bg-[var(--color-black)] py-4 mt-20 md:mt-32 mb-20 md:mb-32">
         <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between">
           <CTAButton text="Let's Build Together" href="/contact" />
