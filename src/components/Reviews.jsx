@@ -48,7 +48,11 @@ export default function Reviews() {
                 </span>
 
                 <div className="bg-black text-white hover:bg-white hover:text-black rounded-full transition-all duration-300">
-                  <SocialLink href="#" label="LinkedIn" icon={FaLinkedinIn} />
+                  <SocialLink
+                    href="https://www.linkedin.com/in/dev-sadiq-ali/"
+                    label="LinkedIn"
+                    icon={FaLinkedinIn}
+                  />
                 </div>
               </div>
             </div>

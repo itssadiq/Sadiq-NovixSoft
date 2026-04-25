@@ -42,24 +42,26 @@ export default function ProjectShowcase({ project }) {
           </div>
         </div>
 
-        {/* RIGHT CONTENT: IMAGES (70% Width) */}
-        <div className="w-full lg:w-[70%] flex gap-4 lg:gap-6">
-          {/* Main Image (Equal 50% on mobile/tablet, 60% on desktop) */}
-          <div className="w-1/2 lg:w-[60%] h-[250px] md:h-[450px] lg:h-auto relative overflow-hidden bg-gray-50">
-            <img
-              src={project.images.main}
-              alt={project.title}
-              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-            />
-          </div>
+        {/* RIGHT CONTENT: SINGLE IMAGE (70% Width) */}
+        <div className="w-full lg:w-[70%]">
+          <div className="w-full relative overflow-hidden bg-gray-50">
+            {/* MOBILE IMAGE: 1:1 Square Ratio (aspect-square) */}
+            <div className="block md:hidden w-full aspect-square">
+              <img
+                src={project.images.mobile || project.images.main}
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+            </div>
 
-          {/* Secondary Image (Equal 50% on mobile/tablet, 40% on desktop) */}
-          <div className="w-1/2 lg:w-[40%] h-[250px] md:h-[450px] lg:h-auto relative overflow-hidden bg-gray-50">
-            <img
-              src={project.images.secondary}
-              alt={`${project.title} detail`}
-              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-            />
+            {/* DESKTOP/TABLET IMAGE: 16:9 Video Ratio (aspect-video) */}
+            <div className="hidden md:block w-full aspect-video">
+              <img
+                src={project.images.main}
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -73,23 +73,12 @@ export default function Footer() {
                 <Link
                   key={link.name}
                   href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group flex items-center lg:justify-end gap-2 type-body !text-white font-medium transition-colors duration-300 hover:!text-[var(--color-primary)]"
                 >
                   {link.name}
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-[var(--color-dim-grey)] group-hover:!text-[var(--color-primary)] transition-colors duration-300"
-                  >
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
+                  <span className="text-xl leading-none">🔗</span>
                 </Link>
               ))}
             </div>
@@ -105,14 +94,14 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 type-body-small-500 uppercase tracking-widest text-[10px]">
             <span className="w-1 h-1 rounded-full bg-white/10"></span>
             <Link
-              href="#"
+              href="/works"
               className="text-white hover:!text-[var(--color-primary)] transition-colors"
             >
               Works
             </Link>
             <span className="w-1 h-1 rounded-full bg-white/10"></span>
             <Link
-              href="#"
+              href="/contact"
               className="text-white hover:!text-[var(--color-primary)] transition-colors"
             >
               Contacts

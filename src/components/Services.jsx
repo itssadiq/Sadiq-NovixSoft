@@ -85,7 +85,7 @@ export default function Services() {
       {/* BLACK CTA BAR - Consistent with Works Ribbon Rule */}
       <div className="w-full bg-[var(--color-black)] py-4 mt-20 md:mt-32">
         <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between">
-          <CTAButton text="Need Support on a Project?" href="#contact" />
+          <CTAButton text="Need Support on a Project?" href="/contact" />
         </div>
       </div>
     </section>

@@ -70,10 +70,11 @@ export default function PageHero({
                 {/* Phone */}
                 <div className="flex flex-col gap-1">
                   <span className="type-caption !text-[var(--color-dim-grey)] !text-[10px] uppercase tracking-wider">
-                    Contact me
+                    Contact me (WhatsApp)
                   </span>
                   <a
-                    href={`tel:${contactData?.phone}`}
+                    href={`https://wa.me/+923002454781`}
+                    target="_blank"
                     className="type-body font-bold !text-white hover:!text-[var(--color-primary)] transition-colors duration-300"
                   >
                     {contactData?.phone}

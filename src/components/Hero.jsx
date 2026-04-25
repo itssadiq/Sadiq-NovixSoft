@@ -33,16 +33,17 @@ export default function Hero() {
           <h1
             className={`type-h1 text-[28px] md:text-[40px] tracking-[-0.02em] leading-[1.1] mb-3 ${revealClasses("delay-0")}`}
           >
-            The Last Developer Your Agency Will
-            <br className="hidden md:block" /> Ever Need to Search For
+            Reliable Web Development Partner for
+            <br className="hidden md:block" /> Agency Projects
           </h1>
 
           <p
             className={`type-body-large text-[14px] md:text-[18px] text-[var(--color-dim-grey)] max-w-2xl leading-relaxed mb-5 ${revealClasses("delay-150")}`}
           >
-            I&apos;m Sadiq, a web developer with 1+ year of agency experience
-            and 10+ live projects delivered. Agencies bring me in when deadlines
-            are tight and the build has to be right the first time.
+            I&apos;m Sadiq, a web developer helping agencies deliver client
+            projects on tight deadlines. Delivered 10+ live projects across
+            multiple industries from build to deployment using WordPress,
+            WooCommerce & MERN stack to build production-ready websites.
           </p>
 
           <div className={revealClasses("delay-300")}>
@@ -50,6 +51,7 @@ export default function Hero() {
               text="See My Work"
               hoverMode="primary"
               icon={<span className="text-xl leading-none">🔖</span>}
+              href="#works"
             />
           </div>
         </div>
@@ -88,6 +90,7 @@ export default function Hero() {
               <ActionButton
                 text="Let's Build Together"
                 icon={<span className="text-xl leading-none">🚀</span>}
+                href="/contact"
               />
             </div>
           </div>

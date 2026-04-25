@@ -8,12 +8,12 @@ import Profile from "../../public/profile.png";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = ["About Me", "Works", "Articles", "Reviews"];
+  // Updated navigation items
+  const navItems = ["About Me", "Works", "Services", "Reviews"];
 
-  // Helper to determine link destination
+  // Updated helper to determine link destination as anchors on homepage
   const getHref = (item) => {
-    if (item === "Reviews") return "/#reviews";
-    return `/${item.toLowerCase().replace(" ", "-")}`;
+    return `/#${item.toLowerCase().replace(" ", "-")}`;
   };
 
   return (
@@ -110,6 +110,7 @@ export default function Navbar() {
           <ActionButton
             text="Let's Talk"
             icon={<span className="text-xl leading-none">👋</span>}
+            href="/contact"
           />
         </div>
       </div>

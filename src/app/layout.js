@@ -3,14 +3,29 @@ import "./globals.css";
 
 const figtree = Figtree({
   subsets: ["latin"],
-  weight: ["400", "500", "600"], // Weights: Regular, Medium, Semibold
-  style: ["normal", "italic"], // Styles: Normal, Italic
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
   variable: "--font-figtree",
 });
 
 export const metadata = {
-  title: "My Portfolio",
-  description: "Portfolio built with Next.js and Tailwind",
+  title: "Sadiq Ali | Web Developer",
+  description: "Reliable Web Development Partner for Digital Agencies",
+  icons: {
+    icon: "/profile.png",
+  },
+  openGraph: {
+    title: "Sadiq Ali | Web Developer",
+    description: "Specialized in high-end agency builds and clean development.",
+    images: ["/profile.png"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sadiq Ali | Web Developer",
+    description: "Reliable web developer for digital agencies.",
+    images: ["/profile.png"],
+  },
 };
 
 export default function RootLayout({ children }) {
