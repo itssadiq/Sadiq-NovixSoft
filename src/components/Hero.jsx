@@ -47,11 +47,7 @@ export default function Hero() {
           </p>
 
           <div className={revealClasses("delay-300")}>
-            <ActionButton
-              text="See My Work"
-              hoverMode="primary"
-              href="#works"
-            />
+            <ActionButton text="See My Work" href="#works" />
           </div>
         </div>
       </main>

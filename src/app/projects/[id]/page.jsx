@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ProjectHero from "@/components/ProjectHero";
 import ProjectGallery from "@/components/ProjectGallery";
 import ProjectDescription from "@/components/ProjectDescription";
+import CTAButton from "@/components/CTAButton"; // Imported CTAButton
 
 // --- DYNAMIC SEO OPTIMIZATION ---
 export async function generateMetadata({ params }) {
@@ -55,6 +56,15 @@ export default async function ProjectPage({ params }) {
       <ProjectHero project={project} />
       <ProjectGallery project={project} />
       <ProjectDescription project={project} />
+
+      {/* BOTTOM RIBBON: NEXT STEPS */}
+      <div className="w-full bg-[var(--color-black)] py-4 mb-20 mt-10">
+        <div className="max-w-[1400px] mx-auto px-6 flex flex-row md:flex-row items-center justify-center md:justify-end gap-6">
+          <CTAButton text="Explore More Work" href="/works" />
+          <CTAButton text="Contact Now" href="/contact" />
+        </div>
+      </div>
+
       <Footer />
     </main>
   );
