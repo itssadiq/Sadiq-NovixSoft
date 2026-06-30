@@ -26,6 +26,9 @@ export const metadata = {
     description: "Reliable web developer for digital agencies.",
     images: ["/profile.png"],
   },
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION,
+  },
 };
 
 export default function RootLayout({ children }) {
