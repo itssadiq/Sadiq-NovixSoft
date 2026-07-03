@@ -1,5 +1,6 @@
 import { Figtree } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${figtree.variable} antialiased bg-white`}>
+        <Analytics/>
         {children}
       </body>
     </html>
